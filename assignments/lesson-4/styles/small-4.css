@@ -1,0 +1,129 @@
+body { font-family: 'Work Sans', sans-serif; }
+
+h1,h2,h3,h4,h5,h6 { font-family: 'Lora', serif; }
+
+header
+{
+    background-color: #ffc; 
+    text-align: center;
+    margin: 2rem auto;
+    border: #a9a9a9;
+    border-style: ridge;
+}
+
+#logo, h1, motto
+{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 1rem;
+}
+
+.motto
+{
+    font-style: italic;
+    padding: 0 0 0 1rem;
+    margin: -1rem 0 1rem 0;
+}
+
+h1 
+{ 
+    padding: 0;
+}
+
+nav 
+{ 
+    display:block;
+    width: 100%;
+    background-color: #008080;
+    padding: .5rem 0 0 0;
+}
+
+ul 
+{ 
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li
+{
+   text-align: center;
+   display: block; 
+   padding: .5rem;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+a:link
+{
+background-color: #008080;
+color: #fff;
+}
+
+a:visited {
+    color: #ffffcc;
+}
+
+a:focus
+{
+    background-color: #520175;
+    color: #fff;
+}
+
+a:hover
+{
+    background-color: #520175;
+    color: #fff;
+}
+
+a:active
+{
+    background-color: #520175;
+    color: #fff;
+}
+
+.active {
+    display:block; 
+    background-color:#520175;
+    padding: .5rem;
+}
+
+.page-name { 
+    text-align: center; 
+}
+
+.summary
+{
+    display: block;
+    background-color: #520175;
+    color: #fff;
+    padding: 1em;
+}
+
+article
+{
+    background-color: #ffffcc;
+    padding: 1em;
+    border: #a9a9a9;
+    border-style: ridge;
+}
+
+.foot
+{
+    display: block;
+    background-color: #008080;
+    color: #fff;
+    margin: 0;
+    padding: .5rem;
+}
+
+.footer-bar
+{
+    background-color: #a9a9a9;
+    color: #000;
+    padding: 1rem;
+    margin: 0;
+}
