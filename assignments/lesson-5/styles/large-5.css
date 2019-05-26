@@ -1,0 +1,57 @@
+@media only screen and (min-width: 900px)
+{
+
+    ul
+    {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    nav li
+    {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        text-align: center;
+        padding: 8px;
+        border-block: solid 1px;
+        border-block-color: #a9a9a9;
+        border-block-width: 6rem;
+    }
+   
+    .w3-container
+    {
+        display: inline-block;
+        box-align: center;
+    }
+
+    .w3-container h4
+    {
+        background-color: #008080;
+        color: #fff;
+    }
+
+    #article 
+    {
+        max-width: 80%;
+        height: auto;
+        box-shadow: 0px 0px 40px #a9a9a9;
+    }
+
+    #map iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50% !important;
+        height: 50% !important;
+        
+    }
+
+
+    
+
+}
