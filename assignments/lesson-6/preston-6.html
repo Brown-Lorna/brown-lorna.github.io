@@ -14,27 +14,38 @@
     </head>
     <body>
         <header>
-            
-            <img id="logo" src="images/weather-window-logo-200.jpg" alt="Weather Window logo" height="40">
+            <picture id="logo">
+                <img src="images/weather-window-logo-200.jpg" alt="Weather Window logo" sizes="10vw"
+                srcset="images/weather-window-logo-50.jpg 50w,
+                        images/weather-window-logo-100.jpg 100w
+                        "
+                >
+            </picture>
             <h1>Weather Window</h1>
             <div class="motto">
                 See what's coming!
             </div>
-            <nav>
-                <a href="#">Menu</a>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a class="active" href="#">Preston</a></li>
-                    <li><a href="#">Soda Springs</a></li>
-                    <li><a href="#">Fish Haven</a></li>
-                    <li><a href="#">Storm Center</a></li>
-                    <li><a href="#">Gallery</a></li>
+            <nav class="clearfix">
+                <ul class="primarynav">
+                    <li><a href="#" title="Menu" onclick="toggleMenu()">&#9776; Menu</a></li>
+                    <li><a href="#" title="Home">Home</a></li>
+                    <li><a class="active" href="#" title="Preston">Preston</a></li>
+                    <li><a href="#" title="Soda Springs">Soda Springs</a></li>
+                    <li><a href="#" title="Fish Haven">Fish Haven</a></li>
+                    <li><a href="#" title="Storm Center">Storm Center</a></li>
+                    <li><a href="#" title="Gallery">Gallery</a></li>
                 </ul>
             </nav>    
         </header>
         <main>
             <h2 class="page-name">Preston, Idaho</h2>
-            <img id="town" src="images/clouds-houses-sky-horizontal.jpg" alt="Horizontal photo of a town with a cloudy sky.">
+            <picture class="herophoto">
+                <img src="images/cit230_image_franklin-large-50.jpg" alt="night sky with trees" sizes="100vw"
+                    srcset="images/cit230_image_franklin-small-50.jpg         500w,
+                            images/cit230_image_franklin-large-50.jpg 1128w
+                            "
+                >
+            </picture>
 
             <div class="summary">
                 <h3>Weather Summary</h3>
@@ -49,42 +60,44 @@
             <h3 class="w3-container">5 Day Forecast</h3>
             <div class="w3-container">
                 <h4>Wed</h4>
-                <img>
+                <img src="images/small-sunny-period-icon.jpg" alt="partly cloudy day icon">
                 <h5>67</h5>
                 <hr>
             </div>
             <div class="w3-container">
                 <h4>Thu</h4>
-                <img>
+                <img src="images/small-sunny-icon.jpg" alt="sunny day icon">
                 <h5>68</h5>
                 <hr>
             </div>
             <div class="w3-container">
                 <h4>Fri</h4>
-                <img>
+                <img src="images/small-rain-icon.jpg" alt="rainy day icon">
                 <h5>65</h5>
                 <hr>
             </div>
 
             <div class="w3-container">
                 <h4>Sat</h4>
-                <img>
+                <img src="images/small-sunny-period-icon.jpg" alt="partly cloudy day icon">
                 <h5>67</h5>
                 <hr>
             </div>
             <div class="w3-container">
                 <h4>Sun</h4>
-                <img>
+                <img src="images/small-sunny-icon.jpg" alt="sunny day icon">
                 <h5>70</h5>
                 <hr>
             </div>
-                
-             
 
-
-            </div>
             <article>
-                <img id="article" src="images/barbeque-food.jpg" alt="Large barbeque grill cooking various meats and vegetables." height="200">
+                <picture class="articleimg">
+                    <img src="images/barbeque-food.jpg" alt="Large barbeque   grill cooking various meats and vegetables." sizes="90vw"
+                        srcset="images/barbeque-food-400.jpg 400w,
+                                images/barbeque-food-large.jpg 800w
+                                "
+                    >
+                </picture>
                 <h3>Preston Community BBQ</h3>
                 <p class="byline">by Trisha Welkins</p>
                 <p>The annual Preston Community BBQ will be held again at Preston City Park. This is one of the best events of the summer. Bob Townsend is organizing the meal for the third time, and he assures us that “there will be plenty of food to satisfy everyone’s tastes.” He has enlisted the same great cooks as last year, including the award-winning Hyrum Donaldson from the County Fare restaurant. Tyra Dobbs has some great games planned so we can all work up an appetite. The Preston firefighters have challenged the community to a tug of war. So, come grab ahold of the rope and see if we can get them muddy!</p>
@@ -108,7 +121,9 @@
                 </div>
             </section>
             <p class="footer-bar">&copy;2019 Our Weather Window | Attributions | Lorna Brown<br>
-            Saturday, 25 May 2019</p>
-        </footer> 
+            <span id="curdate"></span></p>
+        </footer>
+        <script src="scripts/hamburger.js"></script>
+        <script src="scripts/currentdate.js"></script>
     </body>
 </html>
