@@ -129,7 +129,7 @@ img
 
 .summary
 {
-    position: absolute;
+    float: left;
     top: 30rem;
     left: 2rem;
     display: inline-block;
@@ -174,6 +174,7 @@ dd
 
 article
 {
+    clear: both;
     background-color: #ffffcc;
     padding: 1em;
     border: #a9a9a9;

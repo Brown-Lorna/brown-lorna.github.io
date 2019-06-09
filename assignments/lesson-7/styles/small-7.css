@@ -1,0 +1,319 @@
+body { font-family: 'Work Sans', sans-serif; }
+
+h1,h2,h3,h4,h5,h6 { font-family: 'Lora', serif; }
+
+header
+{
+    background-color: #ffc;   
+    text-align: center;
+    margin: 2rem auto;
+    border: #a9a9a9;
+    border-style: ridge;
+}
+
+#heading
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#logo, h1, motto
+{
+  /*   vertical-align: middle; */
+    margin: 1rem .5rem 1rem;
+}
+
+#logo {
+    width: 10vw;
+    height: auto;
+}
+
+.motto
+{
+
+    align-self: flex-end;
+    font-style: italic;
+    padding: 0 0 0 1rem;
+    margin: -1rem 0 1rem 0;
+}
+
+h1 
+{ 
+    padding: 0;
+    font-size: 1.5rem;
+}
+
+nav 
+{ 
+    display: block;
+    width: 100%;
+    background-color: #008080;
+    padding: .5rem 0 0 0;
+}
+
+ul 
+{ 
+    list-style-type: none; 
+    margin: 0 auto;
+    padding: 0;
+}
+
+.primarynav li:first-child
+{
+    display: block;
+}
+
+.primarynav li
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    display: none; 
+    padding: .5rem;
+}
+
+.primarynav a
+{
+    display: block;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+.responsive li
+{
+    display: block;
+}
+
+a:link
+{
+background-color: #008080;
+color: #fff;
+}
+
+a:visited {
+    color: #ffffcc;
+}
+
+a:focus
+{
+    background-color: #520175;
+    color: #fff;
+}
+
+a:hover
+{
+    background-color: #520175;
+    color: #fff;
+}
+
+a:active
+{
+    background-color: #520175;
+    color: #fff;
+}
+
+.active {
+    display:block; 
+    background-color:#520175;
+    margin: 0 -1em 0;
+}
+
+.page-name { 
+    text-align: center; 
+}
+
+img
+{
+    max-width: 100%;
+    height: auto;
+}
+
+#herophoto
+{
+    position: static;
+}
+
+.summary
+{
+    position: absolute;
+    top: 15rem;
+    left: 2rem;
+    display: inline-block;
+    background-color: #520175;
+    color: #fff;
+    padding: 0 1em 0;
+    text-align: center;
+    box-shadow: 0 0 30px #a9a9a9;
+}
+
+.summary h3
+{
+    display: inline-block;
+    border-bottom: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #fff;
+}
+
+#forecast
+{
+    display: none;
+}
+
+dt
+{
+    display: block;
+    float: left;
+    width: 100px;
+    text-align: right;
+}
+
+dt:after 
+{
+    content: ':'; 
+}
+
+dd
+{
+    display: block;
+    text-align: left;
+}
+
+.w3-container
+{
+    display: none;
+}
+
+article
+{
+    background-color: #ffffcc;
+    padding: 1em;
+    border: #a9a9a9;
+    border-style: ridge;
+    margin: 1em;
+}
+
+.articleimg 
+{
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0px 0px 30px #a9a9a9;
+}
+
+.byline 
+{
+    font-size: .7em;
+    font-style: italic;
+    color: #008080;
+    margin: -1.5em 0 0 0;
+
+}
+
+.foot
+{
+    display: block;
+    background-color: #008080;
+    color: #fff;
+    margin: 0;
+    padding: 1rem;
+}
+
+.foot p
+{
+    margin-top: -1em;
+    padding-top: 0;
+}
+
+.fa
+{
+   padding: 20px;
+   font-size: 25px;
+   width: 25px;
+   text-align: center;
+   text-decoration: none;
+   margin: 5px 2px;
+   border-radius: 50%; 
+}
+
+.fa:hover
+{
+    opacity: 0.7;
+}
+
+.fa-facebook
+{
+    background: #385998;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.fa-pinterest
+{
+    background: #c8232c;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.fa-twitter
+{
+    background: #55acee;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.fa-vimeo
+{
+    background: #19B7EA;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+#map {
+    position: relative;
+    padding-bottom: 50%;
+    height: 0;
+    overflow: hidden;
+}
+
+#map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90% !important;
+    height: 90% !important;
+}
+
+.footer-bar
+{
+    background-color: #a9a9a9;
+    color: #000;
+    padding: 1rem;
+    margin: 0;
+    text-align: center;
+}
+
+/*---- Clearfix to prevent elements from collapsing 
+    add class="clearfix" to element that you need to prevent from collapsing----*/
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+} 
+
+h2 {
+    margin: 0 0 0 1.5rem;
+}
+
+.gallery {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+}
+
+figcaption {
+    display: none;
+}

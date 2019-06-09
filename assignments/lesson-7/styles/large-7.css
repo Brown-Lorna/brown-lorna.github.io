@@ -1,0 +1,91 @@
+@media only screen and (min-width: 600px)
+{
+    #logo, h1, motto
+    {
+        margin: 1rem;
+        font-size: 2em;
+    }
+
+    nav button {display: none;}
+
+    nav ul {margin-left: 2%;}
+
+    ul
+    {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+  .primarynav li
+    {
+        float: left;
+        display: block;
+        margin-right: 1rem; 
+    }
+   
+    .primarynav li:first-child
+    {
+        display: none;
+    }
+   
+    .w3-container
+    {
+        display: inline-block;
+        border: 1px solid;
+        text-align: center;
+        padding: 5px;
+    }
+
+    .w3-container h4
+    {
+        background-color: #008080;
+        color: #fff;
+    }
+
+   #forecast
+    {
+        display: block;
+        border: none;
+        text-align: center;
+    }
+
+    .articleimg 
+    {
+        float: right;
+        max-width: 30vw;
+        height: auto;
+        box-shadow: 0px 0px 40px #a9a9a9;
+    }
+
+    #map iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50% !important;
+        height: 50% !important;   
+    }
+
+    .gallery {
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 0;
+    }
+
+    .gallery h2 {
+        grid-column: 1 / 4;
+        padding: 0 0 0 1rem;
+    }
+
+    figure:hover {
+        box-shadow: 0 0 20px #a9a9a9;
+    }
+
+    figcaption {
+        display: contents;
+        font-style: italic;
+    }
+}

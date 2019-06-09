@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum scale=1">
+        <title>Preston 7</title>
+        <meta name="description" content="Fourth draft of a class assignment for a weather website.">
+        <link rel="stylesheet" href="../../styles/normalize.css">
+        <link rel="stylesheet" href="styles/small-7.css">
+        <link rel="stylesheet" href="styles/large-7.css">
+        <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <header>
+            <div id="heading">
+            <picture id="logo">
+                <img src="images/weather-window-logo-200.jpg" alt="Weather Window logo" sizes="10vw"
+                srcset="images/weather-window-logo-50.jpg 50w,
+                        images/weather-window-logo-100.jpg 100w
+                        "
+                >
+            </picture>
+            <h1>Weather Window</h1>
+            <div class="motto">
+                See what's coming!
+            </div>
+        </div>
+            <nav class="clearfix">
+                <ul class="primarynav">
+                    <li><a href="#" title="Menu" onclick="toggleMenu()">&#9776; Menu</a></li>
+                    <li><a href="#" title="Home">Home</a></li>
+                    <li><a class="active" href="#" title="Preston">Preston</a></li>
+                    <li><a href="#" title="Soda Springs">Soda Springs</a></li>
+                    <li><a href="#" title="Fish Haven">Fish Haven</a></li>
+                    <li><a href="#" title="Storm Center">Storm Center</a></li>
+                    <li><a href="gallery-7.html" title="Gallery">Gallery</a></li>
+                </ul>
+            </nav>    
+        </header>
+        <main>
+            <h2 class="page-name">Preston, Idaho</h2>
+            <picture class="herophoto">
+                <img src="images/clouds-houses-sky-large.jpg" alt="small town with bright sunshine" sizes="100vw"
+                    srcset="images/clouds-houses-sky-small.jpg 200w,
+                            images/clouds-houses-sky-large.jpg 1128w">
+            </picture>
+
+            <div class="summary">
+                <h3>Weather Summary</h3>
+                <dl>
+                    <dt>Currently</dt><dd>&nbsp;Cloudy</dd>
+                    <dt>High</dt><dd>&nbsp;<span id="temperature">69</span>&#176;F</dd>
+                    <dt>Wind/Chill</dt><dd>&nbsp;<span id="output"></span>&#176;F</dd>
+                    <dt>Humidity</dt><dd>&nbsp;51&percnt;</dd>
+                    <dt>Wind Speed</dt><dd>&nbsp;<span id="wspeed">4</span>mph</dd>
+                </dl>
+            </div>
+            <h3 id="forecast">5 Day Forecast</h3>
+            <div class="w3-container">
+                <h4>Wed</h4>
+                <img src="images/small-sunny-period-icon.jpg" alt="partly cloudy day icon">
+                <h5>67 &#176;F</h5>
+                <hr>
+            </div>
+            <div class="w3-container">
+                <h4>Thu</h4>
+                <img src="images/small-sunny-icon.jpg" alt="sunny day icon">
+                <h5>68 &#176;F</h5>
+                <hr>
+            </div>
+            <div class="w3-container">
+                <h4>Fri</h4>
+                <img src="images/small-rain-icon.jpg" alt="rainy day icon">
+                <h5>65 &#176;F</h5>
+                <hr>
+            </div>
+
+            <div class="w3-container">
+                <h4>Sat</h4>
+                <img src="images/small-sunny-period-icon.jpg" alt="partly cloudy day icon">
+                <h5>67 &#176;F</h5>
+                <hr>
+            </div>
+            <div class="w3-container">
+                <h4>Sun</h4>
+                <img src="images/small-sunny-icon.jpg" alt="sunny day icon">
+                <h5>70 &#176;F</h5>
+                <hr>
+            </div>
+
+            <article>
+                <picture class="articleimg">
+                    <img src="images/barbeque-food.jpg" alt="Large barbeque   grill cooking various meats and vegetables." sizes="90vw"
+                        srcset="images/barbeque-food-400.jpg 400w,
+                                images/barbeque-food-large.jpg 800w
+                                "
+                    >
+                </picture>
+                <h3>Preston Community BBQ</h3>
+                <p class="byline">by Trisha Welkins</p>
+                <p>The annual Preston Community BBQ will be held again at Preston City Park. This is one of the best events of the summer. Bob Townsend is organizing the meal for the third time, and he assures us that “there will be plenty of food to satisfy everyone’s tastes.” He has enlisted the same great cooks as last year, including the award-winning Hyrum Donaldson from the County Fare restaurant. Tyra Dobbs has some great games planned so we can all work up an appetite. The Preston firefighters have challenged the community to a tug of war. So, come grab ahold of the rope and see if we can get them muddy!</p>
+            </article>
+        </main>
+        <footer>
+            <section class="foot">
+                <h4>Weather Window</h4>
+                <img src="images/iconfinder_map-marker_299087.png" alt="icon of map pin">
+                <p id="address">&nbsp;&nbsp;&nbsp;&nbsp;74 South State St<br> 
+                    Preston, ID 83263<br><br>
+                    &phone; 999.555.4985<br>&#9993; <a href="mailto:weatherwindow@example.net">weatherwindow@oww.net</a>
+                </p>
+                <br>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-pinterest"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-vimeo"></a>
+                
+                <div id="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d757846.2277990256!2d-112.4407532126847!3d42.1002565296411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8754f78c7cda6c31%3A0xf1b3b4fc465a4a3f!2sPreston%2C+ID+83263!5e0!3m2!1sen!2sus!4v1558850185239!5m2!1sen!2sus" width="600" height="450" style="border:0" allowfullscreen></iframe>
+                </div>
+            </section>
+            <p class="footer-bar">&copy;2019 Our Weather Window | Attributions | Lorna Brown<br>
+            <span id="curdate"></span></p>
+        </footer>
+        <script src="scripts/hamburger.js"></script>
+        <script src="scripts/currentdate.js"></script>
+        <script src="scripts/windchill.js"></script>
+    </body>
+</html>
