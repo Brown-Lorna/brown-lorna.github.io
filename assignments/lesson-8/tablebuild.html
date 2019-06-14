@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum scale=1">
+        <title>W08 Table Build</title>
+        <meta name="author" content="Lorna Brown">
+        <meta name="description" content="Student Assignment building an HTML table">
+        <link rel="stylesheet" href="/brown-lorna.github.io/styles/normalize.css">
+        <link rel="stylesheet" href="styles/tablebuild.css">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Use the thead, tbody, and tfoot tags in your table structure.
+        Use a maximum of one class or id selector.
+        Use one instance of the first-child or nth:child() pseudo classes. -->
+        <h1>Table Build Exercise</h1>
+        <table id="acmew">
+
+            <thead>
+                <tr>
+                    <td colspan="3">ACME Wildwest</td>
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Period</th>
+                    <th>Sales</th>
+                    <th>Sales Goal</th>
+                </tr>
+                <tr>
+                    <td>August</td>
+                    <td>$3,590</td>
+                    <td>$4000</td>
+                </tr>
+                <tr>
+                    <td>September</td>
+                    <td>$4,420</td>
+                    <td>$5000</td>
+                </tr>
+                <tr>
+                    <td>October</td>
+                    <td>$4,870</td>
+                    <td>$5000</td>
+                </tr>
+                <tr>
+                    <td>November</td>
+                    <td>$8,610</td>
+                    <td>$7,500</td>
+                </tr>
+                <tr>
+                    <td id="shopping">Black Friday</td>
+                    <td colspan="2">$3,200</td>
+                </tr>
+                <tr>
+                    <td>December</td>
+                    <td>$6,820</td>
+                    <td>$7,500</td>
+                </tr>
+            </tbody>
+            <tfoot>            
+                <tr>
+                    <!-- I didn't change the date or the bRauls name since it wasn't in the instructions. It helped to make the size comparisons while I was building the table. I added a meta tag with me as author so you can see it is my code. -->
+                    <td colspan="3">Compiled 12.20.2020 by bRauls</td>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,54 @@
+body {
+    font-family: 'ubuntu', sans-serif;
+}
+
+/*  Color scheme: #e7f0ed, #e7ffed (data rows) and #628ca6, #7fb9c2, #fff, $000 
+I used the hsl color for the grey since it is a form of the black and white. Besides, I hadn't tried using it before so it was good practice.  */
+
+table {
+    background-color:hsl(0, 0%, 80%);
+    box-shadow: 10px 10px 10px #628ca6;
+    text-align: center;
+
+}
+
+/* This takes care of the other body stripe without adding another nth-child selector.  */
+tbody {
+    background-color: #e7f0ed;
+}
+
+/* It could be (2n+1) or (odd). It's more interesting to be (2n+1). */
+tbody tr:nth-child(2n+1) {
+    background-color: #e7ffed;
+}
+
+tbody tr:nth-child(5) td:nth-child(3) {
+    background-color: #628ca6;
+    color: #fff;
+}
+
+#shopping {
+    font-style: italic;
+}
+
+thead, tfoot, th, td {
+    padding: 7px;
+}
+
+thead td {
+    font-size: 1.7rem;
+    font-weight: bolder;
+    background-color: #7fb9c2;
+}
+
+th {
+    color: #fff;
+    background-color: #628ca6;
+    font-size: 1.1em;
+}
+
+tfoot td {
+    font-size: .8rem;
+    background-color: #7fb9c2;
+    font-weight: 600;
+}
