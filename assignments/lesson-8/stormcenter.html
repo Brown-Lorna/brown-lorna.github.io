@@ -62,10 +62,10 @@
 
             <fieldset class="top">
                 <legend>Weather Event/ Storm</legend>
-                <label>Storm Date: <input type="date" name=""></label>
+                <label>Storm Date: <input type="date" name="storm-date"></label>
                 <label for="storm-type">Storm Type: 
-                    <input list="storm-type" name="storm-type">
-                    <datalist id="storm-type">
+                    <input id="storm-type" list="type-storm" name="storm-type">
+                    <datalist id="type-storm">
                         <option value="Flash Flood"></option>
                         <option value="Hail"></option>
                         <option value="Hurricane"></option>
@@ -94,7 +94,7 @@
                 <label><input type="radio" name="in-danger" value="maybe"> Maybe</label>
                 <label><input type="radio" name="in-danger" value="no"> No</label>
 
-                <label>Additional information or comments (400 character max)<textarea rows="5" width="95%" name="comments" maxlength="400"></textarea></label>
+                <label>Additional information or comments (400 character max)<textarea rows="5" cols="50" name="comments" maxlength="400"></textarea></label>
 
             </fieldset>
             <input type="submit" value="Report Weather">
