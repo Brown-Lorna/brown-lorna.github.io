@@ -33,9 +33,15 @@
     .w3-container
     {
         display: inline-block;
-        border: 1px solid;
+        border: 1px solid black;
         text-align: center;
         padding: 5px;
+    }
+
+    .fiveday {
+        margin: auto auto 1em;
+        width: 600px;
+        text-align: center;
     }
 
     .w3-container h4
@@ -59,12 +65,9 @@
         box-shadow: 0px 0px 40px #a9a9a9;
     }
 
-    #map iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 50% !important;
-        height: 50% !important;   
+    iframe {
+        width: 90% !important;
+        min-height: 35rem !important;   
     }
 
     .gallery {
@@ -87,5 +90,9 @@
     figcaption {
         display: contents;
         font-style: italic;
+    }
+
+    .foot {
+        min-height: 800px;
     }
 }
