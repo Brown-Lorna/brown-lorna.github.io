@@ -46,6 +46,10 @@
 
                 <section>
                     
+            <!--       <figure>
+
+                    </figure>   --> 
+                    
                 </section>
 
                 <div class="w3-container">
@@ -68,7 +72,6 @@
 
                 <div class="w3-container">
                         <H3 class="town">Fish Haven</H3>
-                        <div class="motto">fishy</div>
                         <div class="towninfo">
     
                         </div>
@@ -109,6 +112,8 @@
         <script>
 
             var section = document.querySelector('section');
+        //    var figure = document.querySelector('figure');
+
             var requestURL = "https://byui-cit230.github.io/weather/data/towndata.json";
             var request = new XMLHttpRequest();
             request.open('GET', requestURL);
@@ -117,35 +122,52 @@
             
             request.onload = function() {
             var weatherTown = request.response;
-            populateSection(weatherTown);
+        //    populateSection(weatherTown);
             showTown(weatherTown);
             }
-            function populateSection(jsonObj) {
-                var townH3 = document.createElement('h4');
-                townH3.textContent = 'Town Name: ' + jsonObj['name'];
-                section.appendChild(townH3);
-            }
+        //    function populateSection(jsonObj) {
+            //    var townH3 = document.createElement('h3');
+            //    townH3.textContent = 'Town Name: ' + jsonObj['name'];
+            //    section.appendChild(townH3);
+            //    figure.appendChild(townH3);
+        //    }
             function showTown(jsonObj) {
                 var townStuff = jsonObj['towns'];
       
                 for (var i = 0; i < townStuff.length; i++) {
                     var myArticle = document.createElement('article');
+                //    var myfigcaption = document.createElement('figcption');
+                    var myH3 = document.createElement('h3');
                     var myH4 = document.createElement('h4');
                     var myPara1 = document.createElement('p');
                     var myPara2 = document.createElement('p');
-                    var myPara3 = document.createElement('p');         
+                    var myPara3 = document.createElement('p');
 
+                    if(townStuff[i].name == 'Preston' || townStuff[i].name == 'Soda Springs' || townStuff[i].name == 'Fish Haven') {
+
+                    myH3.textContent = townStuff[i].name;
                     myH4.textContent = townStuff[i].motto;
                     myPara1.textContent = 'Year Founded: ' + townStuff[i].yearFounded;
                     myPara2.textContent = 'Current Population: ' + townStuff[i].currentPopulation;
                     myPara3.textContent = 'Average Rainfall: ' + townStuff[i].averageRainfall;
 
+
+                    myArticle.appendChild(myH3);
                     myArticle.appendChild(myH4);
                     myArticle.appendChild(myPara1);
                     myArticle.appendChild(myPara2);
                     myArticle.appendChild(myPara3);
 
                     section.appendChild(myArticle);
+                    }
+
+                //    myfigcaption.appendChild(myH3);
+                //    myfigcaption.appendChild(myh4);
+                //    myfigcaption.appendChild(myPara1);
+                //    myfigcaption.appendChild(myPara2);
+                //    myfigcaption.appendChild(myPara3);
+
+                //    figure.appendChild(myfigcaption);
                 }
             }
         </script>

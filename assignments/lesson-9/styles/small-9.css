@@ -200,7 +200,8 @@ section div.w3-container {
     border-style: ridge;
     max-width: 100%;
     height: auto;
-    background-color:  #ffc; 
+    background-color:  #ffc;
+    border-radius: 5%; 
 }
 
 section h3 {
@@ -208,6 +209,8 @@ section h3 {
     background-color: #008080;
     color: #fff;
     padding: 1em;
+    margin: -1em -1em 0;
+    text-align: center;
 }
 
 section h4 {
