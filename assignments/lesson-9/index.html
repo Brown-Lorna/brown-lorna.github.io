@@ -42,18 +42,12 @@
         <main>
             <h2 class="page-name">Welcome to our Town Weather</h2>
 
-        <!--   <section id="towns"> --> 
-
                 <section>
                     
-            <!--       <figure>
-
-                    </figure>   --> 
-                    
+                       
                 </section>
 
-                <div class="w3-container">
-                    <h3 class="town">Preston</h3>
+                <div class="mytowns">
                     <img srcset="images/aerial-view-architecture-cars-280221-small.jpg 400w,
                             images/aerial-view-architecture-cars-280221-medium.jpg 800w"
                         sizes="(max-width: 400px) 400px,
@@ -61,26 +55,22 @@
                         src="images/aerial-view-architecture-cars-280221-large.jpg" alt="houses with red roofs at the foot of the hills">
                 </div>
 
-                <div class="w3-container">
-                    <h3 class="town">Soda Springs</h3>
+                <div class="mytowns">
                     <img srcset="images/animal-black-cars-688835-small.jpg 400w,
                             images/animal-black-cars-688835-medium.jpg 800w"
                         sizes="(max-width: 400px) 400px,
                             (max-width:800px) 800px"
                         src="images/animal-black-cars-688835-large.jpg" alt="residential street with parked cars, houses, and trees">
                 </div>
-
-                <div class="w3-container">
-                        <H3 class="town">Fish Haven</H3>
-                        <div class="towninfo">
-    
-                        </div>
+                <div class="mytowns">
                         <img srcset="images/black-forest-conifer-daylight-158316-small.jpg 400w,
                                 images/black-forest-conifer-daylight-158316-medium.jpg 800w"
                             sizes="(max-width: 400px) 400px,
                                 (max-width:800px) 800px"
                             src="images/black-forest-conifer-daylight-158316-large.jpg" alt="small village by a lake surrounded by trees">
                     </div>
+
+
 
         </main>
         <footer>
@@ -107,50 +97,39 @@
         <script src="scripts/currentdate.js"></script>
         <script src="scripts/windchill.js"></script>
 
-
-
         <script>
-
-            var section = document.querySelector('section');
-        //    var figure = document.querySelector('figure');
-
+            var section = document.querySelector("section");
             var requestURL = "https://byui-cit230.github.io/weather/data/towndata.json";
             var request = new XMLHttpRequest();
-            request.open('GET', requestURL);
-            request.responseType = 'json';
+            request.open("GET", requestURL);
+            request.responseType = "json";
             request.send();
-            
+
             request.onload = function() {
             var weatherTown = request.response;
-        //    populateSection(weatherTown);
             showTown(weatherTown);
             }
-        //    function populateSection(jsonObj) {
-            //    var townH3 = document.createElement('h3');
-            //    townH3.textContent = 'Town Name: ' + jsonObj['name'];
-            //    section.appendChild(townH3);
-            //    figure.appendChild(townH3);
-        //    }
+
             function showTown(jsonObj) {
-                var townStuff = jsonObj['towns'];
+                var townStuff = jsonObj.towns;
       
                 for (var i = 0; i < townStuff.length; i++) {
-                    var myArticle = document.createElement('article');
-                //    var myfigcaption = document.createElement('figcption');
-                    var myH3 = document.createElement('h3');
-                    var myH4 = document.createElement('h4');
-                    var myPara1 = document.createElement('p');
-                    var myPara2 = document.createElement('p');
-                    var myPara3 = document.createElement('p');
+                    var myArticle = document.createElement("article");
+                    var myH3 = document.createElement("h3");
+                    var myH4 = document.createElement("h4");
+                    var myPara1 = document.createElement("p");
+                    var myPara2 = document.createElement("p");
+                    var myPara3 = document.createElement("p");
+                    var myImg = document.createElement('img');
 
-                    if(townStuff[i].name == 'Preston' || townStuff[i].name == 'Soda Springs' || townStuff[i].name == 'Fish Haven') {
+                    if(townStuff[i].name == "Preston" || townStuff[i].name == "Soda Springs" || townStuff[i].name == "Fish Haven") {
 
                     myH3.textContent = townStuff[i].name;
                     myH4.textContent = townStuff[i].motto;
-                    myPara1.textContent = 'Year Founded: ' + townStuff[i].yearFounded;
-                    myPara2.textContent = 'Current Population: ' + townStuff[i].currentPopulation;
-                    myPara3.textContent = 'Average Rainfall: ' + townStuff[i].averageRainfall;
-
+                    myPara1.textContent = "Year Founded: " + townStuff[i].yearFounded;
+                    myPara2.textContent = "Current Population: " + townStuff[i].currentPopulation;
+                    myPara3.textContent = "Average Rainfall: " + townStuff[i].averageRainfall;
+                    
 
                     myArticle.appendChild(myH3);
                     myArticle.appendChild(myH4);
@@ -160,14 +139,6 @@
 
                     section.appendChild(myArticle);
                     }
-
-                //    myfigcaption.appendChild(myH3);
-                //    myfigcaption.appendChild(myh4);
-                //    myfigcaption.appendChild(myPara1);
-                //    myfigcaption.appendChild(myPara2);
-                //    myfigcaption.appendChild(myPara3);
-
-                //    figure.appendChild(myfigcaption);
                 }
             }
         </script>

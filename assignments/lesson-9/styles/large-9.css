@@ -22,12 +22,18 @@
     {
         float: left;
         display: block;
-        margin-right: 1rem; 
+        margin-right: 2rem;
     }
    
     .primarynav li:first-child
     {
         display: none;
+    }
+
+    .active {
+        justify-content: center;
+        padding: .8em 1em .5em;
+        margin: -.8em -1em 0;
     }
    
     .w3-container
@@ -92,6 +98,13 @@
     }
 
     section {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 0;
+    }
+
+    
+    .mytowns {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 0;
