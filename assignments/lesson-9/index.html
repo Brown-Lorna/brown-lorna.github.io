@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum scale=1">
+        <title>Home-9</title>
+        <meta name="description" content="Home page for a class assignment for a weather website.">
+        <link rel="stylesheet" href="../../styles/normalize.css">
+        <link rel="stylesheet" href="styles/small-9.css">
+        <link rel="stylesheet" href="styles/large-9.css">
+        <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <header>
+            <div id="heading">
+            <picture id="logo">
+                <img src="images/weather-window-logo-200.jpg" alt="Weather Window logo" sizes="10vw"
+                srcset="images/weather-window-logo-50.jpg 50w,
+                        images/weather-window-logo-100.jpg 100w
+                        "
+                >
+            </picture>
+            <h1>Weather Window</h1>
+            <div class="motto">
+                See what's coming!
+            </div>
+        </div>
+            <nav class="clearfix">
+                <ul class="primarynav">
+                    <li><a href="#" title="Menu" onclick="toggleMenu()">&#9776; Menu</a></li>
+                    <li><a class="active" href="index.html" title="Home">Home</a></li>
+                    <li><a href="preston-9.html" title="Preston">Preston</a></li>
+                    <li><a href="#" title="Soda Springs">Soda Springs</a></li>
+                    <li><a href="#" title="Fish Haven">Fish Haven</a></li>
+                    <li><a href="stormcenter.html" title="Storm Center">Storm Center</a></li>
+                    <li><a href="gallery-9.html" title="Gallery">Gallery</a></li>
+                </ul>
+            </nav>    
+        </header>
+        <main>
+            <h2 class="page-name">Welcome to our Town Weather</h2>
+
+        <!--   <section id="towns"> --> 
+
+                <section>
+                    
+                </section>
+
+                <div class="w3-container">
+                    <h3 class="town">Preston</h3>
+                    <img srcset="images/aerial-view-architecture-cars-280221-small.jpg 400w,
+                            images/aerial-view-architecture-cars-280221-medium.jpg 800w"
+                        sizes="(max-width: 400px) 400px,
+                            (max-width:800px) 800px"
+                        src="images/aerial-view-architecture-cars-280221-large.jpg" alt="houses with red roofs at the foot of the hills">
+                </div>
+
+                <div class="w3-container">
+                    <h3 class="town">Soda Springs</h3>
+                    <img srcset="images/animal-black-cars-688835-small.jpg 400w,
+                            images/animal-black-cars-688835-medium.jpg 800w"
+                        sizes="(max-width: 400px) 400px,
+                            (max-width:800px) 800px"
+                        src="images/animal-black-cars-688835-large.jpg" alt="residential street with parked cars, houses, and trees">
+                </div>
+
+                <div class="w3-container">
+                        <H3 class="town">Fish Haven</H3>
+                        <div class="motto">fishy</div>
+                        <div class="towninfo">
+    
+                        </div>
+                        <img srcset="images/black-forest-conifer-daylight-158316-small.jpg 400w,
+                                images/black-forest-conifer-daylight-158316-medium.jpg 800w"
+                            sizes="(max-width: 400px) 400px,
+                                (max-width:800px) 800px"
+                            src="images/black-forest-conifer-daylight-158316-large.jpg" alt="small village by a lake surrounded by trees">
+                    </div>
+
+        </main>
+        <footer>
+            <div class="foot">
+                <h4>Weather Window</h4>
+                <img id="mappin" src="images/iconfinder_map-marker_299087.png" alt="icon of map pin">
+                <p id="address">&nbsp;&nbsp;&nbsp;&nbsp;74 South State St<br> 
+                    Preston, ID 83263<br><br>
+                    &phone; 999.555.4985<br>&#9993; <a href="mailto:weatherwindow@example.net">weatherwindow@oww.net</a>
+                </p>
+                <br>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-pinterest"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-vimeo"></a>
+                <br>
+                
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d757846.2277990256!2d-112.4407532126847!3d42.1002565296411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8754f78c7cda6c31%3A0xf1b3b4fc465a4a3f!2sPreston%2C+ID+83263!5e0!3m2!1sen!2sus!4v1558850185239!5m2!1sen!2sus" allowfullscreen></iframe>
+            </div>
+            <p class="footer-bar">&copy;2019 Our Weather Window | Attributions | Lorna Brown<br>
+            <span id="curdate"></span></p>
+        </footer>
+        <script src="scripts/hamburger.js"></script>
+        <script src="scripts/currentdate.js"></script>
+        <script src="scripts/windchill.js"></script>
+
+
+
+        <script>
+
+            var section = document.querySelector('section');
+            var requestURL = "https://byui-cit230.github.io/weather/data/towndata.json";
+            var request = new XMLHttpRequest();
+            request.open('GET', requestURL);
+            request.responseType = 'json';
+            request.send();
+            
+            request.onload = function() {
+            var weatherTown = request.response;
+            populateSection(weatherTown);
+            showTown(weatherTown);
+            }
+            function populateSection(jsonObj) {
+                var townH3 = document.createElement('h4');
+                townH3.textContent = 'Town Name: ' + jsonObj['name'];
+                section.appendChild(townH3);
+            }
+            function showTown(jsonObj) {
+                var townStuff = jsonObj['towns'];
+      
+                for (var i = 0; i < townStuff.length; i++) {
+                    var myArticle = document.createElement('article');
+                    var myH4 = document.createElement('h4');
+                    var myPara1 = document.createElement('p');
+                    var myPara2 = document.createElement('p');
+                    var myPara3 = document.createElement('p');         
+
+                    myH4.textContent = townStuff[i].motto;
+                    myPara1.textContent = 'Year Founded: ' + townStuff[i].yearFounded;
+                    myPara2.textContent = 'Current Population: ' + townStuff[i].currentPopulation;
+                    myPara3.textContent = 'Average Rainfall: ' + townStuff[i].averageRainfall;
+
+                    myArticle.appendChild(myH4);
+                    myArticle.appendChild(myPara1);
+                    myArticle.appendChild(myPara2);
+                    myArticle.appendChild(myPara3);
+
+                    section.appendChild(myArticle);
+                }
+            }
+        </script>
+    </body>
+</html>
