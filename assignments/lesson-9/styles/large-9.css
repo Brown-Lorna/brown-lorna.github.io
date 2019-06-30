@@ -12,6 +12,7 @@
 
     ul
     {
+        display: flex;
         list-style-type: none;
         margin: 0;
         padding: 0;
@@ -20,7 +21,7 @@
 
   .primarynav li
     {
-        float: left;
+    /*    float: left;  */
         display: block;
         margin-right: 2rem;
     }
@@ -102,13 +103,12 @@
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 0;
     }
-
-    
-    .mytowns {
+   
+    /* .mytowns {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 0;
-    }
+    } */
 
     figure:hover {
         box-shadow: 0 0 20px #a9a9a9;

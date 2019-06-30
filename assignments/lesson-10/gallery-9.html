@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum scale=1">
+        <title>Gallery-9</title>
+        <meta name="description" content="Photo gallery of weather-related images.">
+        <link rel="stylesheet" href="../../styles/normalize.css">
+        <link rel="stylesheet" href="styles/small-9.css">
+        <link rel="stylesheet" href="styles/medium-9.css">
+        <link rel="stylesheet" href="styles/large-9.css">
+        <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <header>
+            <div id="heading">
+                <picture id="logo">
+                        <img src="images/weather-window-logo-200.jpg" alt="Weather Window logo" sizes="10vw"
+                        srcset="images/weather-window-logo-50.jpg 50w,
+                                images/weather-window-logo-100.jpg 100w
+                                "
+                        >
+                    </picture>
+                    <h1>Weather Window</h1>
+                    <div class="motto">
+                        See what's coming!
+                    </div>
+                </div>
+                    <nav class="clearfix">
+                        <ul class="primarynav">
+                            <li><a href="#" title="Menu" onclick="toggleMenu()">&#9776; Menu</a></li>
+                            <li><a href="index.html" title="Home">Home</a></li>
+                            <li><a href="preston-9.html" title="Preston">Preston</a></li>
+                            <li><a href="#" title="Soda Springs">Soda Springs</a></li>
+                            <li><a href="#" title="Fish Haven">Fish Haven</a></li>
+                            <li><a href="stormcenter.html" title="Storm Center">Storm Center</a></li>
+                            <li><a class="active" href="#" title="Gallery">Gallery</a></li>
+                        </ul>
+                    </nav>    
+        </header>
+        <main class="gallery">
+            <h2>Weather Gallery</h2>
+            <figure>
+                <img srcset="images/cars-cold-daylight-small.jpg 200w,
+                    images/cars-cold-daylight-medium.jpg 400w,
+                    images/cars-cold-daylight-large.jpg 800w"
+                sizes="(max-width: 200px) 200px,
+                    (max-width: 400px) 400px,
+                    800px"
+                src="images/cars-cold-daylight-large.jpg" alt="Cars driving on a snowy road surrounded by trees">
+                <figcaption>Cars driving on a snowy road west of Clifton</figcaption>
+            </figure> 
+            <figure>
+                <img srcset="images/double-rainbow-small.jpg 200w,
+                    images/double-rainbow-medium.jpg 400w,
+                    images/double-rainbow-large.jpg 800w"
+                sizes="(max-width: 200px) 200px,
+                    (max-width: 400px) 400px,
+                    800px"
+                src="images/double-rainbow-large.jpg" alt="Double rainbow over a field">
+                <figcaption>Double rainbow over a field outside of Dayton</figcaption>
+            </figure>
+            <figure>
+                <img srcset="images/blue-bright-danger-small.jpg 200w,
+                    images/blue-bright-danger-medium.jpg 400w,
+                    images/blue-bright-danger-large.jpg 800w"
+                sizes="(max-width: 200px) 200px,
+                    (max-width: 400px) 400px,
+                    800px"
+                src="images/blue-bright-danger-large.jpg" alt="large bolts of lightning over buildings">
+                <figcaption>Lightning over Preston</figcaption>
+            </figure>
+            <figure>
+                <img srcset="images/calamity-clouds-dark-small.jpg 200w,
+                    images/calamity-clouds-dark-medium.jpg 400w,
+                    images/calamity-clouds-dark-large.jpg 800w"
+                sizes="(max-width: 200px) 200px,
+                    (max-width: 400px) 400px,
+                    800px"
+                src="images/calamity-clouds-dark-large.jpg" alt="A tornado over a field next to a town">
+                <figcaption>A tornado over a field near Franklin</figcaption>
+            </figure>
+            <figure>
+                <img srcset="images/cold-curve-dawn-small.jpg 200w,
+                    images/cold-curve-dawn-medium.jpg 400w,
+                    images/cold-curve-dawn-large.jpg 800w"
+                sizes="(max-width: 200px) 200px,
+                    (max-width: 400px) 400px,
+                    800px"
+                src="images/cold-curve-dawn-large.jpg" alt="A curved road in the fog">
+                <figcaption>A foggy road near Mink Creek</figcaption>
+            </figure>
+            <figure>
+                <img srcset="images/bright-environment-flora-small.jpg 200w,
+                    images/bright-environment-flora-medium.jpg 400w,
+                    images/bright-environment-flora-large.jpg 800w"
+                sizes="(max-width: 200px) 200px,
+                    (max-width: 400px) 400px,
+                    800px"
+                src="images/bright-environment-flora-large.jpg" alt="heavy rain on leaves and bushes">
+                <figcaption>Heavy rain falls on the plants in Whitney</figcaption>
+            </figure>                                             
+        </main>
+        <footer>
+            <section class="foot">
+                    <h4>Weather Window</h4>
+                    <img src="images/iconfinder_map-marker_299087.png" alt="icon of map pin">
+                    <p id="address">&nbsp;&nbsp;&nbsp;&nbsp;74 South State St<br> 
+                    Preston, ID 83263<br><br>
+                    &phone; 999.555.4985<br>&#9993; <a href="mailto:weatherwindow@example.net">weatherwindow@oww.net</a>
+                </p>
+                <br>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-pinterest"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-vimeo"></a>
+                        
+                <div id="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d757846.2277990256!2d-112.4407532126847!3d42.1002565296411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8754f78c7cda6c31%3A0xf1b3b4fc465a4a3f!2sPreston%2C+ID+83263!5e0!3m2!1sen!2sus!4v1558850185239!5m2!1sen!2sus" width="600" height="450" style="border:0" allowfullscreen></iframe>
+                </div>
+            </section>
+                <p class="footer-bar">&copy;2019 Our Weather Window | Attributions | Lorna Brown<br>
+                <span id="curdate"></span></p>
+        </footer>
+        <script src="scripts/hamburger.js"></script>
+        <script src="scripts/currentdate.js"></script>
+    </body>
+</html>

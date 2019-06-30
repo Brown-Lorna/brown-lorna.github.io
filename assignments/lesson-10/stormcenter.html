@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum scale=1">
+        <title>Storm Center</title>
+        <meta name="description" content="Class assignment for a weather website with a form.">
+        <link rel="stylesheet" href="../../styles/normalize.css">
+        <link rel="stylesheet" href="styles/small-9.css">
+        <link rel="stylesheet" href="styles/large-9.css">
+        <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <header>
+            <div id="heading">
+            <picture id="logo">
+                <img src="images/weather-window-logo-200.jpg" alt="Weather Window logo" sizes="10vw"
+                srcset="images/weather-window-logo-50.jpg 50w,
+                        images/weather-window-logo-100.jpg 100w
+                        "
+                >
+            </picture>
+            <h1>Weather Window</h1>
+            <div class="motto">
+                See what's coming!
+            </div>
+        </div>
+            <nav class="clearfix">
+                <ul class="primarynav">
+                    <li><a href="#" title="Menu" onclick="toggleMenu()">&#9776; Menu</a></li>
+                    <li><a href="index.html" title="Home">Home</a></li>
+                    <li><a href="preston-9.html" title="Preston">Preston</a></li>
+                    <li><a href="#" title="Soda Springs">Soda Springs</a></li>
+                    <li><a href="#" title="Fish Haven">Fish Haven</a></li>
+                    <li><a class="active" href="#" title="Storm Center">Storm Center</a></li>
+                    <li><a href="gallery-9.html" title="Gallery">Gallery</a></li>
+                </ul>
+            </nav>    
+        </header>
+        <main>
+            <h2 class="page-name">Storm Center</h2>
+            <picture class="herophoto">
+                <img src="images/dark-evening-lightning-small.jpg" alt="dramatic lightning on a night sky" sizes="400vw"
+                    srcset="images/dark-evening-lightning-small.jpg 400w,
+                    images/dark-evening-lightning-large.jpg 1000w">
+            </picture>
+            
+
+        <form method="get" action="thanks.html">
+                <p>Report storms or unusual weather events.</p>
+
+            <fieldset class="top"> 
+                <legend>Your Information</legend>
+                <!-- My regex only totals the required 5 together to allow for short names like Don Ho. I made the input case insensitive. I also prevented anthing other than 2 names. -->
+                <label>Full Name:* <input type="text" name="full-name" required pattern="^([A-Za-z]{3,})\s([A-Za-z]{2,})$" maxlength="30"></label>
+                <label>Email: <input type="email" name="email" placeholder="user@email.com"></label>
+                <label>Phone Number:* <input type="tel" name="phone" required></label>
+                <label>Zip Code:* <input type="number" name="zip" required></label>
+            </fieldset>
+
+            <fieldset class="top">
+                <legend>Weather Event/ Storm</legend>
+                <label>Storm Date: <input type="date" name="storm-date"></label>
+                <label for="storm-type">Storm Type: 
+                    <input id="storm-type" list="type-storm" name="storm-type">
+                    <datalist id="type-storm">
+                        <option value="Flash Flood"></option>
+                        <option value="Hail"></option>
+                        <option value="Hurricane"></option>
+                        <option value="Thunderstorm"></option>
+                        <option value="Tornado"></option>
+                    </datalist>
+                </label>
+                <label>Storm Severity: (1-10) <input type="range" name="severity" min="1" max="10"></label>
+                <label>Storm Region: 
+                    <select name="region">
+            <!-- I tried "disabled" but then I couldn't see the "Select Region" by default. It showed Fish Haven with the "Select Region" only visible as a greyed out choice when I used the dropdown. This way it has nothing to pass and I can see "Select Region" -->
+                        <option value="">Select Region</option>
+                        <option value="fish-haven">Fish Haven</option>
+                        <option value="preston">Preston</option>
+                        <option value="sugar-city">Sugar City</option>
+                        
+                    </select>
+                </label>
+            </fieldset>
+
+            <fieldset class="top">
+                <legend>More Information</legend>
+
+                <div class="side">Are You in Danger?</div>
+                <label><input type="radio" name="in-danger" value="yes"> Yes</label>
+                <label><input type="radio" name="in-danger" value="maybe"> Maybe</label>
+                <label><input type="radio" name="in-danger" value="no"> No</label>
+
+                <label>Additional information or comments (400 character max)<textarea rows="5" cols="50" name="comments" maxlength="400"></textarea></label>
+
+            </fieldset>
+            <input type="submit" value="Report Weather">
+        </form>
+
+        </main>
+        <footer>
+            <section class="foot">
+                <h4>Weather Window</h4>
+                <img src="images/iconfinder_map-marker_299087.png" alt="icon of map pin">
+                <p id="address">&nbsp;&nbsp;&nbsp;&nbsp;74 South State St<br> 
+                    Preston, ID 83263<br><br>
+                    &phone; 999.555.4985<br>&#9993; <a href="mailto:weatherwindow@example.net">weatherwindow@oww.net</a>
+                </p>
+                <br>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-pinterest"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-vimeo"></a>
+                <br>
+                
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d757846.2277990256!2d-112.4407532126847!3d42.1002565296411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8754f78c7cda6c31%3A0xf1b3b4fc465a4a3f!2sPreston%2C+ID+83263!5e0!3m2!1sen!2sus!4v1558850185239!5m2!1sen!2sus" allowfullscreen></iframe>
+            </section>
+            <p class="footer-bar">&copy;2019 Our Weather Window | Attributions | Lorna Brown<br>
+            <span id="curdate"></span></p>
+        </footer>
+        <script src="scripts/hamburger.js"></script>
+        <script src="scripts/currentdate.js"></script>
+        <script src="scripts/windchill.js"></script>
+    </body>
+</html>
