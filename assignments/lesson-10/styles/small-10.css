@@ -31,11 +31,10 @@ header
 
 .motto
 {
-
-    align-self: flex-end;
     font-style: italic;
-    padding: 0 0 0 1rem;
+    padding: 0 0 0 1.5rem;
     margin: -1rem 0 1rem 0;
+    text-align: left;
 }
 
 h1 
@@ -141,7 +140,7 @@ img
 .summary
 {
     position: relative;
-    bottom: 2rem;
+    bottom: 4rem;
     left: 1rem;
     /* top: 15rem;
     left: 2rem; */
@@ -151,7 +150,8 @@ img
     padding: 0 1em 0;
     text-align: center;
     box-shadow: 0 0 30px #a9a9a9;
-    margin-bottom: -3rem;
+    margin-bottom: -5rem;
+    width: 200px;
 }
 
 .summary h3
@@ -160,6 +160,11 @@ img
     border-bottom: 1px;
     border-bottom-style: solid;
     border-bottom-color: #fff;
+    margin-bottom: -3rem;
+}
+
+#curr-condition {
+    text-transform: capitalize;
 }
 
 #forecast
@@ -186,25 +191,11 @@ dd
     text-align: left;
 }
 
-
-
+/* The container for the 5-day forecast  */
 .w3-container
 {
     display: none;
-}
-
-/* section div.w3-container { 
-    margin: 0;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 1rem;
-    border: #a9a9a9;
-    border-style: ridge;
-    max-width: 100%;
-    height: auto;
-    background-color:  #ffc;
-    border-radius: 5%; 
-} */
+} 
 
 section h3 {
     display: block;
@@ -219,16 +210,18 @@ section h4 {
     font-style: italic;
 }
 
+
 article
 {
     background-color: #ffffcc;
     padding: 1em;
     border: #a9a9a9;
     border-style: ridge;
-    margin: 0 1em 1em;
+    margin: -2rem .3em .3em;
     clear: both;
 }
 
+/* this is the img in the town page article */
 .articleimg 
 {
     max-width: 100%;
@@ -236,6 +229,15 @@ article
     box-shadow: 0px 0px 30px #a9a9a9;
 }
 
+/* This is the image in the articles from the JSON data on the home page */
+.townImg
+{
+    position: relative;
+    bottom: 5px;
+    width: 100%;
+    /* padding-bottom: 0;
+    margin: 0 -1% -1% -1%; */
+}
 
 .byline 
 {

@@ -12,6 +12,7 @@
 
     ul
     {
+        display: flex;
         list-style-type: none;
         margin: 0;
         padding: 0;
@@ -20,7 +21,7 @@
 
   .primarynav li
     {
-        float: left;
+    /*    float: left;  */
         display: block;
         margin-right: 2rem;
     }
@@ -42,11 +43,12 @@
         border: 1px solid black;
         text-align: center;
         padding: 5px;
+        margin-top: auto;
     }
 
     .fiveday {
-        margin: auto auto 1em;
-        width: 600px;
+        margin: -2rem auto 1em;
+        width: 700px;
         text-align: center;
     }
 
@@ -55,6 +57,7 @@
         display: block;
         background-color: #008080;
         color: #fff;
+        padding: .5rem 2rem .5rem;
     }
 
     .w3-container {
@@ -62,6 +65,7 @@
         border: #a9a9a9;
         border-style: ridge;
         padding: 0 1rem 0;
+        margin: 1rem 0 1rem;
     }
 
    #forecast
@@ -69,6 +73,7 @@
         display: block;
         border: none;
         text-align: center;
+        margin-top: -3rem;
     }
 
     .articleimg 
@@ -102,13 +107,12 @@
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 0;
     }
-
-    
-    .mytowns {
+   
+    /* .mytowns {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 0;
-    }
+    } */
 
     figure:hover {
         box-shadow: 0 0 20px #a9a9a9;

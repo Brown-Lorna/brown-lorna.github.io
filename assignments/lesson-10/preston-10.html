@@ -3,11 +3,11 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum scale=1">
-        <title>Preston-9</title>
+        <title>Preston-10</title>
         <meta name="description" content="Class assignment town page for a weather website.">
         <link rel="stylesheet" href="../../styles/normalize.css">
-        <link rel="stylesheet" href="styles/small-9.css">
-        <link rel="stylesheet" href="styles/large-9.css">
+        <link rel="stylesheet" href="styles/small-10.css">
+        <link rel="stylesheet" href="styles/large-10.css">
         <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -22,10 +22,12 @@
                         "
                 >
             </picture>
-            <h1>Weather Window</h1>
-            <div class="motto">
-                See what's coming!
-            </div>
+            <div id="titleMotto">
+                    <h1>Weather Window</h1>
+                    <div class="motto">
+                        See what's coming!
+                    </div>
+                </div>
         </div>
             <nav class="clearfix">
                 <ul class="primarynav">
@@ -35,7 +37,7 @@
                     <li><a href="#" title="Soda Springs">Soda Springs</a></li>
                     <li><a href="#" title="Fish Haven">Fish Haven</a></li>
                     <li><a href="stormcenter.html" title="Storm Center">Storm Center</a></li>
-                    <li><a href="gallery-9.html" title="Gallery">Gallery</a></li>
+                    <li><a href="gallery-10.html" title="Gallery">Gallery</a></li>
                 </ul>
             </nav>    
         </header>
@@ -50,11 +52,11 @@
             <div class="summary">
                 <h3>Weather Summary</h3>
                 <dl>
-                    <dt>Currently</dt><dd>&nbsp;Cloudy</dd>
-                    <dt>High</dt><dd>&nbsp;<span id="temperature">69</span>&#176;F</dd>
-                    <dt>Wind/Chill</dt><dd>&nbsp;<span id="output"></span>&#176;F</dd>
-                    <dt>Humidity</dt><dd>&nbsp;51&percnt;</dd>
+                    <dt>Currently</dt><dd>&nbsp;<span id="curr-condition">Cloudy</span></dd>
+                    <dt>High</dt><dd>&nbsp;<span id="curr-temp">69</span>&#176;F</dd>
+                    <dt>Humidity</dt><dd>&nbsp;<span id="humidity">51</span>&percnt;</dd>
                     <dt>Wind Speed</dt><dd>&nbsp;<span id="wspeed">4</span>mph</dd>
+                    <dt>Wind/Chill</dt><dd>&nbsp;<span id="wchill"></span>&#176;F</dd>
                 </dl>
             </div>
 
@@ -62,28 +64,29 @@
             <h3 id="forecast">5 Day Forecast</h3>
             <div class="fiveday">
             <div class="w3-container">
-                <h4>Wed</h4>
-                <img src="images/small-sunny-period-icon.jpg" alt="partly cloudy day icon">
-                <h5>67 &#176;F</h5>
+                <h4 id="dayofweek">Wed</h4>
+                <!-- <img src="images/small-sunny-period-icon.jpg" alt="partly cloudy day icon"> -->
+                <img src="http://openweathermap.org/img/wn/10d@2x.png">
+                <h5><span id="day-temp">67</span>&#176;F</h5>
                 <hr>
             </div>
-            <div class="w3-container">
+            <!-- <div class="w3-container">
                 <h4>Thu</h4>
                 <img src="images/small-sunny-icon.jpg" alt="sunny day icon">
-                <h5>68 &#176;F</h5>
+                <h5><span id="day2temp">68</span>&#176;F</h5>
                 <hr>
             </div>
             <div class="w3-container">
                 <h4>Fri</h4>
                 <img src="images/small-rain-icon.jpg" alt="rainy day icon">
-                <h5>65 &#176;F</h5>
+                <h5><span id="day3temp">65</span>&#176;F</h5>
                 <hr>
             </div>
 
             <div class="w3-container">
                 <h4>Sat</h4>
                 <img src="images/small-sunny-period-icon.jpg" alt="partly cloudy day icon">
-                <h5>67 &#176;F</h5>
+                <h5><span id="day4temp">67</span>&#176;F</h5>
                 <hr>
             </div>
             <div class="w3-container">
@@ -91,7 +94,7 @@
                 <img src="images/small-sunny-icon.jpg" alt="sunny day icon">
                 <h5>70 &#176;F</h5>
                 <hr>
-            </div>
+            </div> -->
         </div>
         </div>
 
@@ -107,6 +110,9 @@
                 <p class="byline">by Trisha Welkins</p>
                 <p>The annual Preston Community BBQ will be held again at Preston City Park. This is one of the best events of the summer. Bob Townsend is organizing the meal for the third time, and he assures us that “there will be plenty of food to satisfy everyone’s tastes.” He has enlisted the same great cooks as last year, including the award-winning Hyrum Donaldson from the County Fare restaurant. Tyra Dobbs has some great games planned so we can all work up an appetite. The Preston firefighters have challenged the community to a tug of war. So, come grab ahold of the rope and see if we can get them muddy!</p>
             </article>
+            <div id="townevents">
+
+            </div>
         </main>
         <footer>
             <section class="foot">
@@ -126,10 +132,56 @@
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d757846.2277990256!2d-112.4407532126847!3d42.1002565296411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8754f78c7cda6c31%3A0xf1b3b4fc465a4a3f!2sPreston%2C+ID+83263!5e0!3m2!1sen!2sus!4v1558850185239!5m2!1sen!2sus" allowfullscreen></iframe>
             </section>
             <p class="footer-bar">&copy;2019 Our Weather Window | Attributions | Lorna Brown<br>
-            <span id="curdate"></span></p>
+                Data source is OpenWeatherMap: <a href="https://openweather.co.uk">https://openweather.co.uk</a><br>
+            <span id="curdate"></span></p> 
         </footer>
         <script src="scripts/hamburger.js"></script>
         <script src="scripts/currentdate.js"></script>
+        
+        <script src="scripts/forecastinfo.js"></script>
+        <script src="scripts/weatherinfo.js"></script>
         <script src="scripts/windchill.js"></script>
+        <script>
+                var section = document.querySelector("#townevents");
+                var requestURL = "https://byui-cit230.github.io/weather/data/towndata.json";
+                var request = new XMLHttpRequest();
+                request.open("GET", requestURL);
+                request.responseType = "json";
+                request.send();
+    
+                request.onload = function() {
+                var tEvents = request.response;
+                showEvents(tEvents);
+                }
+    
+                function showEvents(jsonObj) {
+                    var townStuff = jsonObj.towns;
+          
+                    for (var i = 0; i < townStuff.length; i++) {
+                        var myArticle = document.createElement("article");
+                        var myH3 = document.createElement("h3");
+                        var myList = document.createElement("ul");
+                        var listItem = document.createElement("li");
+    
+                        if(townStuff[i].name == "Preston") {
+
+                        //     for (i in townStuff.events) {
+                        //     listItem += townStuff.events[i];
+                        // }
+
+    
+                        myH3.textContent = townStuff[i].name + " Events";
+                        listItem.textContent = townStuff[i].events;
+
+
+                        myArticle.appendChild(myH3);
+                        myArticle.appendChild(myList);
+                        myArticle.appendChild(listItem);
+    
+                        section.appendChild(myArticle);
+                        }
+                    }
+                }
+            </script>
     </body>
 </html>
