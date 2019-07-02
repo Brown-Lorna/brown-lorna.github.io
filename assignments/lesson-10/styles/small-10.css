@@ -217,7 +217,7 @@ article
     padding: 1em;
     border: #a9a9a9;
     border-style: ridge;
-    margin: -2rem .3em .3em;
+    margin: 0 .3em .3em;
     clear: both;
 }
 
@@ -338,6 +338,10 @@ h2 {
 section h2 {
     margin: 1rem 0 0 2.5rem;
     text-align: center;
+}
+
+.eventList {
+    display: inline;
 }
 
 .gallery {

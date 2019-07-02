@@ -9,20 +9,6 @@ weatherObj.onload = function() {
     document.getElementById('curr-condition').innerHTML = jsonRespObj.weather[0].description;
     document.getElementById('curr-temp').innerHTML = jsonRespObj.main.temp;
     document.getElementById('humidity').innerHTML = jsonRespObj.main.humidity;
-    document.getElementById('wspeed').innerHTML = jsonRespObj.wind.speed;     
+    document.getElementById('wspeed').innerHTML = jsonRespObj.wind.speed;  
+        calculateWindChill();  
  }
-
-// formula for wind chill factor
-let t = parseInt(document.getElementById("curr-temp").innerHTML);
-let s = parseInt(document.getElementById("wspeed").innerHTML);
-let chill = 35.74 + (0.6215 * t) - 35.75 * (Math.pow(s, 0.16)) + 0.4275 * tmp * (Math.pow(s, 0.16));
-document.getElementById("wchill").innerHTML = chill.toFixed(1);
-// chill = windchill factor in F
-// t = average air temperature in F
-// s = wind speed in mph
-
-
-// "curr-condition">Cloudy</span></dd>
-//                     <dt>High</dt><dd>&nbsp;<span id="curr-temp">69</span>&#176;F</dd>
-//                     <dt>Humidity</dt><dd>&nbsp;<span id="humidity">51</span>&percnt;</dd>
-//                     <dt>Wind Speed</dt><dd>&nbsp;<span id="wspeed"

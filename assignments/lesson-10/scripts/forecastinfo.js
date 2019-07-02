@@ -1,29 +1,69 @@
-var weatherObj = new XMLHttpRequest();
-weatherObj.open('GET', 'https://api.openweathermap.org/data/2.5/forecast?id=5604473&units=imperial&appid=ff61a8123e1362057ad25e88cd4cfb95', true);
-weatherObj.send();
+var weatherObj2 = new XMLHttpRequest();
+weatherObj2.open('GET', 'https://api.openweathermap.org/data/2.5/forecast?id=5604473&units=imperial&appid=ff61a8123e1362057ad25e88cd4cfb95', true);
+weatherObj2.send();
 
-weatherObj.onload = function() {
-    var forecastObj = JSON.parse(weatherObj.responseText);
+weatherObj2.onload = function() {
+    var forecastObj = JSON.parse(weatherObj2.responseText);
     console.log(forecastObj);
 
-    document.getElementById('dayofweek').innerHTML = forecastObj.list[0].main.temp;
-//     var d = new Date();
-// var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    showForecast(forecastObj);
+}
 
-// document.getElementById("dayofweek").innerHTML = (days[d.getDay()]);
-    document.getElementById('day-temp').innerHTML = forecastObj.list[0].main.temp;
+function showForecast(jsonObj) {
+    var forecastStuff = jsonObj;
+
+    for (var i = 0; i < forecastStuff.list.length; i++) {
+        if (forecastStuff.list[i].dt_txt.includes("18:00:00")) {
+           
+            var myDiv = document.createElement("div");
+            var myH4 = document.createElement("h4");
+            var myImg = document.createElement("img");
+            var myH5 = document.createElement("h5");
+
+            // Area under construction
+            // Still need to get it to pull the right day from the array
+            // % of (day number / 8 )
+
+            // j=i++ if j > 6  else J-7
+            // for (var i = 0; i < 6; i++) {
+            //     var d = getDay(forecastStuff.list[i].dt_txt.includes("18:00:00"));
+
+            // }
+
+            // Placeholder during construction
+            var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+            myH4.textContent = (days[d.getDay(forecastStuff.list[i].dt_txt)]);
+
+            // End of area under construction
+
+            myImg.setAttribute('src', "http://openweathermap.org/img/wn/" + forecastStuff.list[i].weather[0].icon + ".png");
+            myImg.setAttribute('alt', 'icon for ' + forecastStuff.list[i].weather.description + 'weather');
+            myH5.textContent = (forecastStuff.list[i].main.temp + " \xB0" + "F");
+            myDiv.className = "w3-container";
+
+            myDiv.appendChild(myH4);
+            myDiv.appendChild(myImg);
+            myDiv.appendChild(myH5);
+    
+            document.getElementById("fiveday").appendChild(myDiv);
+        }
+    }
+
 }
 
 
-{/* <div class="fiveday">
-            <h3 id="forecast">5 Day Forecast</h3>
-            <div class="fiveday">
-            <div class="w3-container">
-                <h4 id="dayofweek">Wed</h4>
-                <img src="images/small-sunny-period-icon.jpg" alt="partly cloudy day icon">
-                <img id="day-icon">
-                <h5><span id="day-temp">67</span>&#176;F</h5> */}
+    
+//     var d = new Date();
+//  document.getElementById("dayofweek").innerHTML = (days[d.getDay()]);
+// var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
+// document.getElementById("dayofweek").innerHTML = (days[d.getDay()]);
+//    
+// }
+
+
+// var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+// myH4.textContent = (days[d.getDay(forecastStuff.list[i].dt_txt)]);  
 
 
                 // var d = new Date();
@@ -34,4 +74,4 @@ weatherObj.onload = function() {
 // var d = new Date();
 // var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
-// document.getElementById("dayofweek").innerHTML = (days[d.getDay()]);
+// document.getElementById("dayofweek").innerHTML = (days[d.getDay()])  

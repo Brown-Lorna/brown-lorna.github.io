@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Preston-10</title>
         <meta name="description" content="Class assignment town page for a weather website.">
         <link rel="stylesheet" href="../../styles/normalize.css">
@@ -53,23 +53,23 @@
                 <h3>Weather Summary</h3>
                 <dl>
                     <dt>Currently</dt><dd>&nbsp;<span id="curr-condition">Cloudy</span></dd>
-                    <dt>High</dt><dd>&nbsp;<span id="curr-temp">69</span>&#176;F</dd>
+                    <dt>High</dt><dd>&nbsp;<span id="curr-temp">69</span> &#176;F</dd>
                     <dt>Humidity</dt><dd>&nbsp;<span id="humidity">51</span>&percnt;</dd>
-                    <dt>Wind Speed</dt><dd>&nbsp;<span id="wspeed">4</span>mph</dd>
-                    <dt>Wind/Chill</dt><dd>&nbsp;<span id="wchill"></span>&#176;F</dd>
+                    <dt>Wind Speed</dt><dd>&nbsp;<span id="wspeed">4</span> mph</dd>
+                    <dt>Wind/Chill</dt><dd>&nbsp;<span id="wchill"></span> &#176;F</dd>
                 </dl>
             </div>
 
             <div class="fiveday">
             <h3 id="forecast">5 Day Forecast</h3>
-            <div class="fiveday">
-            <div class="w3-container">
+            <div id="fiveday">
+            <!-- <div class="w3-container">
                 <h4 id="dayofweek">Wed</h4>
-                <!-- <img src="images/small-sunny-period-icon.jpg" alt="partly cloudy day icon"> -->
+                 <img src="images/small-sunny-period-icon.jpg" alt="partly cloudy day icon">
                 <img src="http://openweathermap.org/img/wn/10d@2x.png">
                 <h5><span id="day-temp">67</span>&#176;F</h5>
                 <hr>
-            </div>
+            </div> -->
             <!-- <div class="w3-container">
                 <h4>Thu</h4>
                 <img src="images/small-sunny-icon.jpg" alt="sunny day icon">
@@ -161,24 +161,25 @@
                         var myArticle = document.createElement("article");
                         var myH3 = document.createElement("h3");
                         var myList = document.createElement("ul");
-                        var listItem = document.createElement("li");
+
+                        // var listItem = document.createElement("li");
     
                         if(townStuff[i].name == "Preston") {
+  
+                            myH3.textContent = townStuff[i].name + " Events";
 
-                        //     for (i in townStuff.events) {
-                        //     listItem += townStuff.events[i];
-                        // }
+                            var townEvents = townStuff[i].events;
+                            for (var j = 0; j < townEvents.length; j++) {
+                                var listItem = document.createElement('li');
+                                listItem.textContent = townEvents[j];
+                                
+                                myList.appendChild(listItem);
+                            }
 
+                            myArticle.appendChild(myH3);
+                            myArticle.appendChild(myList);
     
-                        myH3.textContent = townStuff[i].name + " Events";
-                        listItem.textContent = townStuff[i].events;
-
-
-                        myArticle.appendChild(myH3);
-                        myArticle.appendChild(myList);
-                        myArticle.appendChild(listItem);
-    
-                        section.appendChild(myArticle);
+                            section.appendChild(myArticle);
                         }
                     }
                 }
