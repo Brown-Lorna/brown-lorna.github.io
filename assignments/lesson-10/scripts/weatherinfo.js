@@ -12,3 +12,5 @@ weatherObj.onload = function() {
     document.getElementById('wspeed').innerHTML = jsonRespObj.wind.speed;  
         calculateWindChill();  
  }
+
+ // calculate windchill at the end so it uses the updated numbers

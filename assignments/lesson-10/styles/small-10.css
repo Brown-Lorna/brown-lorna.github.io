@@ -20,7 +20,6 @@ header
 
 #logo, h1, motto
 {
-  /*   vertical-align: middle; */
     margin: 1rem .5rem 1rem;
 }
 
@@ -142,8 +141,6 @@ img
     position: relative;
     bottom: 4rem;
     left: 1rem;
-    /* top: 15rem;
-    left: 2rem; */
     display: inline-block;
     background-color: #520175;
     color: #fff;
@@ -221,7 +218,7 @@ article
     clear: both;
 }
 
-/* this is the img in the town page article */
+/* The img in the town page article */
 .articleimg 
 {
     max-width: 100%;
@@ -229,14 +226,12 @@ article
     box-shadow: 0px 0px 30px #a9a9a9;
 }
 
-/* This is the image in the articles from the JSON data on the home page */
+/* The image in the articles from the JSON data on the home page */
 .townImg
 {
     position: relative;
     bottom: 5px;
     width: 100%;
-    /* padding-bottom: 0;
-    margin: 0 -1% -1% -1%; */
 }
 
 .byline 
