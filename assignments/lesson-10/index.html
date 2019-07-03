@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title><Home-10></Home-10></title>
         <meta name="description" content="Home page for a class assignment for a weather website.">
         <link rel="stylesheet" href="../../styles/normalize.css">
@@ -155,65 +155,7 @@
                     myArticle.appendChild(myPara2);
                     myArticle.appendChild(myPara3);
                     myArticle.appendChild(myImg);
-                    var section = document.querySelector("section");
-            var requestURL = "https://byui-cit230.github.io/weather/data/towndata.json";
-            var request = new XMLHttpRequest();
-            request.open("GET", requestURL);
-            request.responseType = "json";
-            request.send();
 
-            request.onload = function() {
-            var weatherTown = request.response;
-            showTown(weatherTown);
-            }
-
-            function showTown(jsonObj) {
-                var townStuff = jsonObj.towns;
-      
-                for (var i = 0; i < townStuff.length; i++) {
-                    var myArticle = document.createElement("article");
-                    var myH3 = document.createElement("h3");
-                    var myH4 = document.createElement("h4");
-                    var myPara1 = document.createElement("p");
-                    var myPara2 = document.createElement("p");
-                    var myPara3 = document.createElement("p");
-                    var myImg = document.createElement('img');
-
-                    if(townStuff[i].name == "Preston" || townStuff[i].name == "Soda Springs" || townStuff[i].name == "Fish Haven") {
-
-                    myH3.textContent = townStuff[i].name;
-                    myH4.textContent = townStuff[i].motto;
-                    myPara1.textContent = "Year Founded: " + townStuff[i].yearFounded;
-                    myPara2.textContent = "Current Population: " + townStuff[i].currentPopulation;
-                    myPara3.textContent = "Average Rainfall: " + townStuff[i].averageRainfall;
-                    myImg.className = "townImg";
-                    
-                        if(townStuff[i].name == "Preston") {
-                            myImg.setAttribute('src', 'images/aerial-view-architecture-cars-280221-medium.jpg');
-                            myImg.setAttribute('alt', 'houses with red roofs at the foot of the hills');
-                        }
-
-                        if(townStuff[i].name == "Soda Springs") {
-                            myImg.setAttribute('src', 'images/animal-black-cars-688835-medium.jpg');
-                            myImg.setAttribute('alt', 'residential street with parked cars, houses, and trees');
-                        }
-
-                        if(townStuff[i].name == "Fish Haven") {
-                            myImg.setAttribute('src', 'images/black-forest-conifer-daylight-158316-medium.jpg');
-                            myImg.setAttribute('alt', 'small village by a lake surrounded by trees');
-                        }
-        
-                    myArticle.appendChild(myH3);
-                    myArticle.appendChild(myH4);
-                    myArticle.appendChild(myPara1);
-                    myArticle.appendChild(myPara2);
-                    myArticle.appendChild(myPara3);
-                    myArticle.appendChild(myImg);
-
-                    section.appendChild(myArticle);
-                    }
-                }
-            }
                     section.appendChild(myArticle);
                     }
                 }
