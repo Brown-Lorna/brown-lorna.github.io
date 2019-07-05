@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Soda Springs</title>
+        <meta name="description" content="Class assignment town page for a weather website.">
+        <link rel="stylesheet" href="../../styles/normalize.css">
+        <link rel="stylesheet" href="styles/small.css">
+        <link rel="stylesheet" href="styles/large.css">
+        <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <header>
+            <div id="heading">
+            <picture id="logo">
+                <img src="images/weather-window-logo-200.jpg" alt="Weather Window logo" sizes="10vw"
+                srcset="images/weather-window-logo-50.jpg 50w,
+                        images/weather-window-logo-100.jpg 100w
+                        "
+                >
+            </picture>
+            <div id="titleMotto">
+                    <h1>Weather Window</h1>
+                    <div class="motto">
+                        See what's coming!
+                    </div>
+                </div>
+        </div>
+            <nav class="clearfix">
+                <ul class="primarynav">
+                    <li><a href="#" title="Menu" onclick="toggleMenu()">&#9776; Menu</a></li>
+                    <li><a href="index.html" title="Home">Home</a></li>
+                    <li><a href="preston.html" title="Preston">Preston</a></li>
+                    <li><a class="active" href="#" title="Soda Springs">Soda Springs</a></li>
+                    <li><a href="fish-haven.html" title="Fish Haven">Fish Haven</a></li>
+                    <li><a href="stormcenter.html" title="Storm Center">Storm Center</a></li>
+                    <li><a href="gallery.html" title="Gallery">Gallery</a></li>
+                </ul>
+            </nav>    
+        </header>
+        <main>
+            <h2 class="page-name">Soda Springs, Idaho</h2>
+            <!-- <picture class="herophoto">
+                <img src="images/clouds-houses-sky-large.jpg" alt="small town with bright sunshine" sizes="100vw"
+                    srcset="images/clouds-houses-sky-small.jpg 200w,
+                            images/clouds-houses-sky-large.jpg 1128w">
+            </picture> -->
+
+            <div class="summary">
+                <h3>Weather Summary</h3>
+                <dl>
+                    <dt>Currently</dt><dd>&nbsp;<span id="curr-condition">Cloudy</span></dd>
+                    <dt>High</dt><dd>&nbsp;<span id="curr-temp">69</span> &#176;F</dd>
+                    <dt>Humidity</dt><dd>&nbsp;<span id="humidity">51</span>&percnt;</dd>
+                    <dt>Wind Speed</dt><dd>&nbsp;<span id="wspeed">4</span> mph</dd>
+                    <dt>Wind/Chill</dt><dd>&nbsp;<span id="wchill"></span> &#176;F</dd>
+                </dl>
+            </div>
+
+            <div class="fiveday">
+            <h3 id="forecast">5 Day Forecast</h3>
+            <div id="fiveday">
+                
+            </div>
+        </div>
+
+            <article>
+                <!-- <picture class="articleimg">
+                    <img src="images/barbeque-food.jpg" alt="Large barbeque   grill cooking various meats and vegetables." sizes="90vw"
+                        srcset="images/barbeque-food-400.jpg 400w,
+                                images/barbeque-food-large.jpg 800w
+                                "
+                    >
+                </picture> -->
+                <h3>Soda Springs Unusual Weather</h3>
+                <p class="byline">by Theodore Raskin</p>
+                <!-- <p>The annual Preston Community BBQ will be held again at Preston City Park. This is one of the best events of the summer. Bob Townsend is organizing the meal for the third time, and he assures us that “there will be plenty of food to satisfy everyone’s tastes.” He has enlisted the same great cooks as last year, including the award-winning Hyrum Donaldson from the County Fare restaurant. Tyra Dobbs has some great games planned so we can all work up an appetite. The Preston firefighters have challenged the community to a tug of war. So, come grab ahold of the rope and see if we can get them muddy!</p> -->
+            </article>
+            <div id="townevents">
+
+            </div>
+        </main>
+        <footer>
+            <section class="foot">
+                <h4>Weather Window</h4>
+                <img id="mappin" src="images/iconfinder_map-marker_299087.png" alt="icon of map pin">
+                <!-- <p id="address">&nbsp;&nbsp;&nbsp;&nbsp;74 South State St<br> 
+                    Preston, ID 83263<br><br>
+                    &phone; 999.555.4985<br>&#9993; <a href="mailto:weatherwindow@example.net">weatherwindow@oww.net</a> -->
+                </p>
+                <br>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-pinterest"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-vimeo"></a>
+                <br>
+                 
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d757846.2277990256!2d-112.4407532126847!3d42.1002565296411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8754f78c7cda6c31%3A0xf1b3b4fc465a4a3f!2sPreston%2C+ID+83263!5e0!3m2!1sen!2sus!4v1558850185239!5m2!1sen!2sus" allowfullscreen></iframe>
+            </section>
+            <p class="footer-bar">&copy;2019 Our Weather Window | Attributions | Lorna Brown<br>
+                Data source is OpenWeatherMap: <a href="https://openweather.co.uk">https://openweather.co.uk</a><br>
+            <span id="curdate"></span></p> 
+        </footer>
+        <script src="scripts/hamburger.js"></script>
+        <script src="scripts/currentdate.js"></script>
+        
+        <script src="scripts/forecastinfo-sodasprings.js"></script>
+        <script>
+                    
+            var weatherObj = new XMLHttpRequest();
+            weatherObj.open('GET', 'https://api.openweathermap.org/data/2.5/weather?id=5607916&units=imperial&appid=ff61a8123e1362057ad25e88cd4cfb95', true);
+            weatherObj.send();
+
+            weatherObj.onload = function() {
+                var jsonRespObj = JSON.parse(weatherObj.responseText);
+                console.log(jsonRespObj);
+
+                document.getElementById('curr-condition').innerHTML = jsonRespObj.weather[0].description;
+                document.getElementById('curr-temp').innerHTML = jsonRespObj.main.temp;
+                document.getElementById('humidity').innerHTML = jsonRespObj.main.humidity;
+                document.getElementById('wspeed').innerHTML = jsonRespObj.wind.speed;  
+                calculateWindChill();  
+            } 
+
+            // calculate windchill at the end so it uses the updated numbers
+        
+        </script>
+        <script src="scripts/windchill.js"></script>
+        <script>
+                var section = document.querySelector("#townevents");
+                var requestURL = "https://byui-cit230.github.io/weather/data/towndata.json";
+                var request = new XMLHttpRequest();
+                request.open("GET", requestURL);
+                request.responseType = "json";
+                request.send();
+    
+                request.onload = function() {
+                var tEvents = request.response;
+                showEvents(tEvents);
+                }
+    
+                function showEvents(jsonObj) {
+                    var townStuff = jsonObj.towns;
+          
+                    for (var i = 0; i < townStuff.length; i++) {
+                        var myArticle = document.createElement("article");
+                        var myH3 = document.createElement("h3");
+                        var myList = document.createElement("ul");
+
+                        // var listItem = document.createElement("li");
+    
+                        if(townStuff[i].name == "Soda Springs") {
+  
+                            myH3.textContent = townStuff[i].name + " Events";
+
+                            var townEvents = townStuff[i].events;
+                            for (var j = 0; j < townEvents.length; j++) {
+                                var listItem = document.createElement('li');
+                                listItem.textContent = townEvents[j];
+                                
+                                myList.appendChild(listItem);
+                            }
+
+                            myArticle.appendChild(myH3);
+                            myArticle.appendChild(myList);
+    
+                            section.appendChild(myArticle);
+                        }
+                    }
+                }
+            </script>
+    </body>
+</html>
