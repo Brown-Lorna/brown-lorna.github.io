@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Preston-10</title>
+        <title>Preston</title>
         <meta name="description" content="Class assignment town page for a weather website.">
         <link rel="stylesheet" href="../../styles/normalize.css">
         <link rel="stylesheet" href="styles/small.css">
@@ -44,11 +44,11 @@
         <main>
             <h2 class="page-name">Preston, Idaho</h2>
             <picture class="herophoto">
-                <img src="images/clouds-houses-sky-large.jpg" alt="small town with bright sunshine" sizes="100vw"
-                    srcset="images/clouds-houses-sky-small.jpg 200w,
-                            images/clouds-houses-sky-large.jpg 1128w">
-            </picture>
-
+                <img 
+                    srcset="image/clouds-houses-sky-600.jpg 600w,
+                            images/clouds-houses-sky-1200.jpg 1128w"
+                    src="images/clouds-houses-sky-large.jpg" alt="small town with bright sunshine" sizes="100vw">
+             </picture>
             <div class="summary">
                 <h3>Weather Summary</h3>
                 <dl>
@@ -68,7 +68,7 @@
 
             <article>
                 <picture class="articleimg">
-                    <img src="images/barbeque-food.jpg" alt="Large barbeque   grill cooking various meats and vegetables." sizes="90vw"
+                    <img src="images/barbeque-food.jpg" alt="Large barbeque grill cooking various meats and vegetables." sizes="90vw"
                         srcset="images/barbeque-food-400.jpg 400w,
                                 images/barbeque-food-large.jpg 800w
                                 "
@@ -129,8 +129,6 @@
                         var myArticle = document.createElement("article");
                         var myH3 = document.createElement("h3");
                         var myList = document.createElement("ul");
-
-                        // var listItem = document.createElement("li");
     
                         if(townStuff[i].name == "Preston") {
   

@@ -1,4 +1,4 @@
-@media only screen and (min-width: 650px)
+@media only screen and (min-width: 600px)
 {
     #logo, h1, motto
     {
@@ -40,6 +40,12 @@
         margin: -.8em -1em 0;
         background-color:#520175;
     }
+
+    .summary
+    {
+        width: 250px;
+        bottom: 10rem;
+    }
    
     .w3-container
     {
@@ -50,14 +56,8 @@
         margin-top: auto;
     }
 
-    .summary
-    {
-        width: 250px;
-    }
-
     .fiveday {
-        /* margin: -2rem auto 1em;
-        width: 700px; */
+        margin: -8rem auto 0;
         text-align: center;
     }
 

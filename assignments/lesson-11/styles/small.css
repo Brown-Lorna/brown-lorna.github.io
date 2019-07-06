@@ -129,21 +129,23 @@ img
 
 #herophoto
 {
-    position: static;
+    /* position: static; */
+    width: 100%;
 }
 
 .summary
 {
     position: relative;
-    bottom: 4rem;
-    left: 1rem;
+    bottom: 6rem;
+    left: 1 rem;
+    /* display: block; */
     display: inline-block;
     background-color: #520175;
     color: #fff;
     padding: 0 1em 0;
     text-align: center;
     box-shadow: 0 0 30px #a9a9a9;
-    margin-bottom: -5rem;
+    /* margin-bottom: -5rem; */
     width: 200px;
 }
 
@@ -163,6 +165,11 @@ img
 #forecast
 {
     display: none;
+}
+
+.fiveday
+{
+    margin: -5em auto 0;
 }
 
 dt
