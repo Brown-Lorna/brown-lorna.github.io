@@ -137,7 +137,7 @@ img
 {
     position: relative;
     bottom: 6rem;
-    left: 1 rem;
+    left: 1rem;
     /* display: block; */
     display: inline-block;
     background-color: #520175;
@@ -229,12 +229,9 @@ article
     box-shadow: 0px 0px 30px #a9a9a9;
 }
 
-/* The image in the articles from the JSON data on the home page */
-.townImg
+#hometowns article
 {
-    position: relative;
-    bottom: 5px;
-    width: 100%;
+    display: grid;
 }
 
 .byline 

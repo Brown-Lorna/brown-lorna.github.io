@@ -15,8 +15,8 @@
     <body>
         <header>
             <div id="heading">
-            <picture id="logo">
-                <img src="images/weather-window-logo-200.jpg" alt="Weather Window logo" sizes="10vw"
+                    <picture id="logo">
+                            <img src="images/weather-window-logo-200.jpg" alt="Weather Window logo" sizes="10vw"
                 srcset="images/weather-window-logo-50.jpg 50w,
                         images/weather-window-logo-100.jpg 100w
                         "
@@ -25,7 +25,7 @@
             <div id="titleMotto">
                     <h1>Weather Window</h1>
                     <div class="motto">
-                        See what's coming!
+                        See the weather coming!
                     </div>
                 </div>
         </div>
@@ -43,6 +43,9 @@
         </header>
         <main>
             <h2 class="page-name">Preston, Idaho</h2>
+
+            <!-- I had difficulty with the hero photo. My first image was short so the page information would be seen above the fold. But when the viewscreen was very narrow, the summary box would obscure the town name. I tried using a taller image for the small screens and a shorter image for the wider screens. But Chrome refused to show the smaller one once the larger one downloaded. In fact, it would stick in my cache and never load the small one again. I had to clear a month's worth of history and cache just to see the smaller one once. Therefore, I chose to compromise with Chrome. I used an image as short as the summary box could work with, and used two different positions for the box. I preferred the look of the shorter image on the large screen, but a lot of research and 3 different tutors could not fix the problem. -->
+
             <picture class="herophoto">
                 <img 
                     srcset="image/clouds-houses-sky-600.jpg 600w,
@@ -51,6 +54,7 @@
              </picture>
             <div class="summary">
                 <h3>Weather Summary</h3>
+                <!-- This summary box code has placeholder values, but the page displays the values from the weather API. -->
                 <dl>
                     <dt>Currently</dt><dd>&nbsp;<span id="curr-condition">Cloudy</span></dd>
                     <dt>High</dt><dd>&nbsp;<span id="curr-temp">69</span> &#176;F</dd>
@@ -76,7 +80,7 @@
                 </picture>
                 <h3>Preston Community BBQ</h3>
                 <p class="byline">by Trisha Welkins</p>
-                <p>The annual Preston Community BBQ will be held again at Preston City Park. This is one of the best events of the summer. Bob Townsend is organizing the meal for the third time, and he assures us that “there will be plenty of food to satisfy everyone’s tastes.” He has enlisted the same great cooks as last year, including the award-winning Hyrum Donaldson from the County Fare restaurant. Tyra Dobbs has some great games planned so we can all work up an appetite. The Preston firefighters have challenged the community to a tug of war. So, come grab ahold of the rope and see if we can get them muddy!</p>
+                <p>The annual Preston Community BBQ will be held again at Preston City Park. This is one of the best events of the summer. Bob Townsend is organizing the meal for the third time, and he assures us that “there will be plenty of food to satisfy everyone’s tastes.” He has enlisted the same great cooks as last year, including the award-winning Hyrum Donaldson from the County Fare restaurant. Tyra Dobbs has some great games planned so we can all work up an appetite. The Preston firefighters have challenged the community to a tug of war. So, come grab ahold of the rope and see if we can get them muddy! (We aren't expecting rain, we will tug over a man-made mudpuddle.)</p>
             </article>
             <div id="townevents">
 

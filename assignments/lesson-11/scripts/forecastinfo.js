@@ -1,3 +1,4 @@
+// This file is for the preston town page
 var weatherObj2 = new XMLHttpRequest();
 weatherObj2.open('GET', 'https://api.openweathermap.org/data/2.5/forecast?id=5604473&units=imperial&appid=ff61a8123e1362057ad25e88cd4cfb95', true);
 weatherObj2.send();
