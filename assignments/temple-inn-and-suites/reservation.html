@@ -1,0 +1,106 @@
+<!-- The reservation page contains a form that collects relevant information when making a normal stay reservation including the location, date, number and type of rooms, registrant's full name, email, phone, home state or country, and special accommodations/comments. You will need to use the CSS flex method for the layout of your reservation form for full credit. -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Reservations</title>
+        <meta name="description" content="Reservation page for a class assignment for the fictional temple inn & suites.">
+        <link rel="stylesheet" href="../../styles/normalize.css">
+        <link rel="stylesheet" href="styles/small.css">
+        <link rel="stylesheet" href="styles/medium.css">
+        <link rel="stylesheet" href="styles/large.css">
+        <link href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    </head>
+    <body>
+            <header>
+                    <img srcset="images/logo3.svg 50w,
+                    images/logo2.svg 100w,
+                    images/logo1 190w"
+                        sizes="(max-width: 50px) 50px,
+                            (max-width: 100px) 100px,
+                            190px"
+                        src="images/logo1.svg" alt="Temple Inn And Suites logo">
+                <h1>Temple Inn &amp; Suites</h1>
+    
+                <nav class="clearfix">
+                        <ul class="primarynav">
+                            <li><a href="#" title="Menu" onclick="toggleMenu()">&#9776; Menu</a></li>
+                            <li><a class="active" href="index.html" title="Home">Home</a></li>
+                            
+                            <li><a href="temple.html" title="temple">Temple</a></li>
+                            <li><a href="reservation.html" title="reservation">Reservation</a></li>
+                            <li><a href="services.html" title="services">Services</a></li>
+                            <li><a href="contact.html" title="contact">Contact</a></li>
+                        </ul>
+                    </nav> 
+    
+            </header>
+        <main>
+            <h2>Make a Reservation</h2>
+            <form method="get" action="thanks.html">         
+                <p id="requirement">* Required Items</p>
+                <!-- I changed the regex to include hyphenated names or names with apostrophes. I also reduced the two names to two required letters each. -->
+                <fieldset class="top">
+                    <legend>Reservation Information</legend>
+                    <label for="location">Location:* <input id="location" list="location-list" name="location" required>
+                        <datalist id="location-list">
+                                <option value="Fort Lauderdale, FL"></option>
+                                <option value="Oakland, CA"></option>
+                                <option value="Portland, OR"></option>
+                                <option value="San Antonio, TX"></option>
+                            </datalist>
+                        </datalist>                   
+                    </label>
+                    <label>Date check in:* <input type="date" name="checkin-date" required></label>
+                    <label>Date check out:* <input type="date" name="checkout-date" required></label>
+                </fieldset>
+                <fieldset>
+                        <legend>Number of Rooms Needed</legend>
+                        <label>Single: 1 Queen bed (up to 2 people) <input type="number" name="single" min="0" max="20"></label>
+                        <label>Double: 2 Queen beds (up to 4 people) <input type="number" name="double" min="0" max="20"></label>
+                        <label>2-Room Suite: 3 Queen beds (up to 6 people) <input type="number" name="suite" min="0" max="10"></label>
+                        <label>Full-time Temple Missionary Suite <input type="number" name="missionary" min="0" max="1"></label>
+                        <legend>Special Accommodations or Comments (max 400): <textarea rows="3" cols="40" name="special" maxlength="400"></textarea></legend>
+                    </fieldset>
+                <fieldset class="top">
+                        <legend>Your Information</legend>
+                        <label>Full Name:* <input type="text" name="full-name" required pattern="^([A-Za-z'-]{2,})\s([A-Za-z'-]{2,})$" maxlength="30"></label>
+                        <label>Email:* <input type="email" name="email" placeholder="user@email.com" required></label>
+                        <label>Phone Number: <input type="tel" name="phone"></label>
+                        <label>Home State or Country: <input type="text" name="state" pattern="^([A-Za-z\s]{2,})$" maxlength="30"></label>
+                </fieldset>
+
+                <fieldset class="top">
+                    <legend>Group Information</legend>
+                    <label>Group Name (use only letters, numbers, and/or spaces): <input type="text" name="group-name" pattern="^([A-Za-z0-9\s]{3,})$" maxlength="30"></label>
+                    <label>Number of people in the group: <input type="number" name="number-group" min="1" max="500"></label>
+                    <label for="group-services">Group Special Services Wanted: <input id="group-services" list="services-group" name="group-services">
+                    <datalist id="services-group">
+                        <option value="dressing rooms"></option>
+                        <option value="meeting room"></option>
+                        <option value="catering"></option>
+                        <option value="dining room"></option>
+                        <option value="reception hall"></option>
+                    </datalist>
+                    </label>
+                </fieldset>
+
+                <button type="submit" value="Make Reservation">Make Reservation</button>
+            </form>
+
+        </main>
+        <footer>
+                <p><a href="contact.html">Contact us at:</a></p>
+                    <h4>Temple Inn &amp; Suites</h4>
+                    <p>4800 Montgomery Ln #300<br>
+                    Bethesda, MD 20814</p>
+                <p>&copy;2019 Temple Inn &amp; Suites | <a href="resource.html">Resources and References</a> | Lorna Brown</p>
+    
+            </footer>
+            <script src="scripts/hamburger.js"></script>
+
+    </body>
+</html>

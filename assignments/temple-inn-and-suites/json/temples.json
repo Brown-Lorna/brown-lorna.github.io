@@ -1,0 +1,138 @@
+{
+    "temples" : [
+        {
+            "name": "Fort Lauderdale Florida",
+            "address": "3901 SW 154th Ave, Davie, FL 33331",
+            "phone": "954-382-8390",
+            "email": "ftlauderdaletemple@lds.net",
+            "services": [
+                "No clothing rental available",
+                "No cafeteria available",
+                "No patron housing available",
+                "No distribution center nearby"
+            ],
+            "history": [
+                "3 October 2009, Announced",
+                "18 June 2011, Groundbreaking",
+                "4 May 2014, Dedicated"
+            ],
+            "ordinance-schedule": [
+                "Baptisms: Monday-Friday 6-8PM, Saturday 8-2PM",
+                "Sealings: Monday-Friday 6-8PM, Saturday 8AM-2PM, Walk-ins and Appointments"
+            ],
+            "session-schedule": [
+                "Tuesday - Friday: 6:15, 7:30",
+                "Saturday: 8:00AM, 9:15AM, 10:30AM, 11:45AM, 1:00PM, 2:15PM"
+            ],
+            "closures": [ 
+                "Saturday, 5 October 2019",
+                "Sunday, 27 October 2019 - Monday, 11 November 2019",
+                "Wednesday, 27 November 2019 - Thursday, 28 November 2019",
+                "Tuesday, 24 December 2019 - Wednesday, 25 December 2019",
+                "Tuesday, 31 December 2019" 
+            ]
+        },
+        {
+            "name": "Oakland California",
+            "address": "4770 Lincoln Ave, Oakland, CA 94602",
+            "phone": "510-531-32200",
+            "email": "oaklandtemple@lds.net",
+            "services": [
+                "Clothing rental available",
+                "Cafeteria available",
+                "Patron housing available",
+                "Distribution center nearby"
+            ],
+            "history": [
+                "26 May 1962, Announced",
+                "26 May 1962, Groundbreaking",
+                "17 November 1964, Dedicated",
+                "16 June 2019, Rededicated"
+            ],
+            "ordinance-schedule": [
+                "Baptisms: Monday-Friday 7AM-9PM, Saturday 8AM-2PM",
+                "Sealings: 7AM-9PM, Walk-ins and Appointments"
+            ],
+            "session-schedule": [
+                "Tuesday - Friday: 12PM, 1PM, 2PM, 3PM, 4PM, 5PM, 6PM, 7PM, 8PM", 
+                "Saturday: 5:30AM, 6AM, 7AM, 8AM, 8:30AM, 9AM, 9:30AM, 10AM, 10:30AM, 11AM, 11:30AM, 12PM, 1PM, 2PM, 3PM, 4PM, 5PM, 6PM, 7PM"
+            ],
+            "closures": [
+                "Monday, 9 September 2019 - Monday, 23 September 2019",
+                "Saturday, 5 October 2019",
+                "Wednesday, 27 November 2019 (Limited Hours)",
+                "Thursday, 28 November 2019",
+                "Tuesday, 24 December 2019",
+                "Wednesday, 25 December 2019",
+                "Tuesday, 31 December 2019"
+            ]
+        },
+        {
+            "name": "Portland",
+            "address": "13600 Kruse Oaks Blvd, Lake Oswego, OR 97035",
+            "phone": "503-639-7066",
+            "email": "portlandtemple@lds.net",
+            "services": [
+                "Clothing rental available",
+                "Cafeteria available",
+                "No patron housing available",
+                "Distribution center nearby"
+            ],
+            "history": [
+                "7 April 1984, Announced",
+                "20 September 1986, Groundbreaking",
+                "19 August 1989, Dedicated"
+            ],
+            "ordinance-schedule": [
+                "Baptisms: Monday-Friday 7AM-8PM, Saturday 6AM-7PM, Groups, Families, and Appointments",
+                "Sealings: 7AM-7PM, Walk-ins and Appointments"
+            ],
+            "session-schedule": [
+                "Tuesday - Friday: 12PM, 1PM, 2PM, 3PM, 4PM, 5PM, 6PM, 7PM, 7:30PM", 
+                "Saturday: 6AM, 7AM, 8AM, 9AM, 10AM, 11AM, 12PM, 1PM, 2PM, 2:30PM, 3PM, 4PM, 5PM, 6PM"
+            ],
+            "closures": [
+                "Monday, 29 July 2019 - Monday, 12 August 2019",
+                "Saturday, 5 October 2019", "Wednesday, 27 November 2019 (Limited Hours)",
+                "Thursday, 28 November 2019",
+                "Tuesday, 24 December 2019",
+                "Wednesday, 25 December 2019"
+            ]
+        },
+        {
+            "name": "San Antonio Texas",
+            "address": "20080 Stone Oak Pkwy, San Antonio, TX 78258",
+            "phone": "210-538-0034",
+            "email": "sanantoniotemple@lds.net",
+            "services": [
+                "No clothing rental available",
+                "No cafeteria available",
+                "No patron housing available",
+                "Distribution center nearby"
+            ],
+            "history": [
+                "24 June 2001, Announced",
+                "29 March 2003, Groundbreaking",
+                "22 May 2005, Dedicated"
+            ],
+            "ordinance-schedule": [
+                "Baptisms: Monday-Friday 9AM-9PM, Saturday 7AM-7PM, Groups, Families, and Appointments",
+                "Sealings: 9AM-9PM, Walk-ins and Appointments"
+            ],
+            "session-schedule": [
+                "Tuesday - Friday: 9AM, 10:30AM, 3PM, 4:30PM, 6:30PM, 8PM, Appointments Only", 
+                "Saturday: 7:30AM, 9AM, 10:30AM, 12PM, 1:30PM, 3PM, 4:30PM, 6PM, Appointments Only"
+            ],
+            "closures": [
+                "Saturday, 5 October 2019",
+                "Monday, 7 October 2019 - Monday, 21 October 2019",
+                "Wednesday, 27 November 2019 (Limited Hours)",
+                "Thursday, 28 November 2019",
+                "Tuesday, 24 December 2019",
+                "Wednesday, 25 December 2019",
+                "Tuesday, 31 December 2019"
+            ]
+        }
+    ]
+
+}

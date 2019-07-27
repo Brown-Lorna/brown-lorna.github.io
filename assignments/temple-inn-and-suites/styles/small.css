@@ -1,0 +1,130 @@
+body { 
+    font-family: 'Lato', sans-serif;
+    color: #000;
+}
+
+h1,h2,h3,h4 { font-family: 'EB Garamond', serif; }
+
+header {
+    background-color: #61899d;
+}
+
+h1 {
+    color: #fff;
+}
+
+h2 {
+    background-color: #fff;
+    color: #203a0d;
+}
+
+h3 {
+    background-color: #61899d;
+    color: #fff; 
+}
+
+section,form {
+    background-color: #efe6d5;
+    border-color: #203a0d;
+    border-style: groove;
+    margin: 1em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+nav 
+{ 
+    display: block;
+    width: 100%;
+    background-color: #203a0d;
+    padding: .5rem 0 0 0;
+}
+
+ul 
+{ 
+    list-style-type: none; 
+    margin: 0 auto;
+    padding: 0;
+}
+
+.primarynav li:first-child
+{
+    display: block;
+}
+
+.primarynav li
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    display: none; 
+    padding: .5rem;
+}
+
+/* .primarynav a
+{
+    display: block;
+} */
+
+a:link
+{
+color: #fff;
+background-color: #203a0d;
+}
+
+a:visited {
+    color: #efe6d5;
+    background-color: #203a0d;
+}
+
+a:focus
+{
+    background-color: #feeda2;
+    color: #000;
+}
+
+a:hover
+{
+    background-color: #feeda2;
+    color: #000;
+}
+
+a:active
+{
+    background-color: #feeda2;
+    color: #000;
+}
+
+button {
+    background-color: #feeda2;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+#curr-condition-f {
+    text-transform: capitalize;
+}
+
+#curr-condition-o {
+    text-transform: capitalize;
+}
+
+#curr-condition-p {
+    text-transform: capitalize;
+}
+
+#curr-condition-s {
+    text-transform: capitalize;
+}
+
+footer {
+    background-color: #203a0d;
+    color: #fff;
+}

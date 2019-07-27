@@ -1,0 +1,27 @@
+@media only screen and (min-width: 650px)
+{
+
+    nav button {display: none;}
+
+    nav ul {margin-left: 2%;}
+
+    ul
+    {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+  .primarynav li
+    {
+        display: block;
+        margin-right: 2rem;
+    }
+   
+    .primarynav li:first-child
+    {
+        display: none;
+    }
+}

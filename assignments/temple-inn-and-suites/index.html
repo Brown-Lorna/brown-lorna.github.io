@@ -1,0 +1,70 @@
+<!-- The home page is a contemporary, exciting landing page providing images of temples and temple attending activities and must include the following:
+o	A call to action to make a hotel reservation
+o	Readily available navigation and contact information for the hotel chain
+o	Summary information about a temple of your choosing -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Home</title>
+        <meta name="description" content="Home page for a class assignment for the fictional temple inn & suites.">
+        <link rel="stylesheet" href="../../styles/normalize.css">
+        <link rel="stylesheet" href="styles/small.css">
+        <link rel="stylesheet" href="styles/medium.css">
+        <link rel="stylesheet" href="styles/large.css">
+        <link href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+                <img srcset="images/logo3.svg 50w,
+                images/logo2.svg 100w,
+                images/logo1 190w"
+                    sizes="(max-width: 50px) 50px,
+                        (max-width: 100px) 100px,
+                        190px"
+                    src="images/logo1.svg" alt="Temple Inn And Suites logo">
+            <h1>Temple Inn &amp; Suites</h1>
+
+            <nav class="clearfix">
+                    <ul class="primarynav">
+                        <li><a href="#" title="Menu" onclick="toggleMenu()">&#9776; Menu</a></li>
+                        <li><a class="active" href="index.html" title="Home">Home</a></li>
+                        
+                        <li><a href="temple.html" title="temple">Temple</a></li>
+                        <li><a href="reservation.html" title="reservation">Reservation</a></li>
+                        <li><a href="services.html" title="services">Services</a></li>
+                        <li><a href="contact.html" title="contact">Contact</a></li>
+                    </ul>
+                </nav> 
+
+        </header>
+        <main>
+
+            <button>Make a Hotel Reservation</button>
+            
+            <section>
+                    <article>
+                            <h3>About the Fort Lauderdale Temple</h3>
+                            <p>The beautiful Fort Lauderdale Temple is located in Davie, Florida. It was dedicated May 4, 2014. It's unique decor reflects the southern Florida landscape. It is open to temple recommend-holding members of The Church of Jesus Christ of Latter-day Saints</p>
+                            <p>Fort Lauderdale temple is one of the largest of the small temples. It doesn't have rental clothing, but out-of-the-area patrons can borrow clothing if necessary. There is also no visitor center, but visitors are welcome to tour the grounds on their own. The temple is open 5 days a week with a limited schedule.</p>
+                        </article>
+                <img>
+            </section>
+
+        </main>
+        <footer>
+            <p><a href="contact.html">Contact us at:</a></p>
+                <h4>Temple Inn &amp; Suites</h4>
+                <p>4800 Montgomery Ln #300<br>
+                Bethesda, MD 20814</p>
+            <p>&copy;2019 Temple Inn &amp; Suites | <a href="resource.html">Resources and References</a> | Lorna Brown</p>
+
+        </footer>
+        <script src="scripts/hamburger.js"></script>
+
+    </body>
+</html>

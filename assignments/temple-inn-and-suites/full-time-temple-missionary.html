@@ -1,0 +1,93 @@
+<!-- A full-time temple missionary page that provides information and images about the suites offered at the hotel with a simple Contact Us form for more details.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Temple Missionaries</title>
+        <meta name="description" content="Long-term suite information page for full-time Temple Missionaries for a class assignment for the fictional temple inn & suites.">
+        <link rel="stylesheet" href="../../styles/normalize.css">
+        <link rel="stylesheet" href="styles/small.css">
+        <link rel="stylesheet" href="styles/medium.css">
+        <link rel="stylesheet" href="styles/large.css">
+        <link href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    </head>
+    <body>
+            <header>
+                    <img srcset="images/logo3.svg 50w,
+                    images/logo2.svg 100w,
+                    images/logo1 190w"
+                        sizes="(max-width: 50px) 50px,
+                            (max-width: 100px) 100px,
+                            190px"
+                        src="images/logo1.svg" alt="Temple Inn And Suites logo">
+                <h1>Temple Inn &amp; Suites</h1>
+    
+                <nav class="clearfix">
+                        <ul class="primarynav">
+                            <li><a href="#" title="Menu" onclick="toggleMenu()">&#9776; Menu</a></li>
+                            <li><a class="active" href="index.html" title="Home">Home</a></li>
+                            
+                            <li><a href="temple.html" title="temple">Temple</a></li>
+                            <li><a href="reservation.html" title="reservation">Reservation</a></li>
+                            <li><a href="services.html" title="services">Services</a></li>
+                            <li><a href="contact.html" title="contact">Contact</a></li>
+                        </ul>
+                    </nav> 
+    
+            </header>
+        <main>
+            <h2>Full-time Temple Missionary Suites</h2>
+            <p>Stay near the temple and have other missionaries for neighbors. These modern and well-maintained suites provides a quiet atmosphere, and are in a separate building from the inn. The suites are furnished, but there is room to personalize your suite by adding a few pieces. Suites are available on a month to month rental only for full-time temple missionaries.</p>
+            
+            <img srcset="images/bed-bedroom-cozy-164595-200.jpg 200w,
+            images/bed-bedroom-cozy-164595-400.jpg 400w,
+            images/bed-bedroom-cozy-164595-600.jpg 600w"
+                sizes="(max-width: 200px) 200px,
+                    (max-width: 400px) 400px,
+                    600px"
+                src="images/bed-bedroom-cozy-164595-600.jpg" alt="Large bed nicely made">
+
+            <h3>Amenities included with the suites:</h3>
+            <ul>
+                <li>Kitchenette stocked with pots, dishes, and flatware</li>
+                <li>King bed in separate bedroom</li>
+                <li>Furnished living/dining room</li>
+                <li>Private bathroom with tub/shower</li>
+                <li>Weekly linen service available</li>
+                <li>Shared lounge area</li>
+                <li>Access to hotel pool and exercise room</li>
+                <li>Shared laundry facilities</li>
+                <li>Shuttle to and from the temple available for all shift changes</li>
+            </ul>
+
+            <form>
+                <legend>Contact us for more details</legend>
+                <label>Name: <input type="text" name="name" pattern="^([A-Za-z'-\s]{2,})$" maxlength="30"></label>
+                <label>Email: <input type="email" name="email" placeholder="user@email.com"></label>
+                <label>Comments/Questions (400 character max): <textarea rows="4" cols="40" name="questions" maxlength="400"></textarea></label>
+                <button type="submit">Request Details</button>
+            </form>
+            <img srcset="images/apartment-architecture-cabinet-200.jpg 200w,
+            images/apartment-architecture-cabinet-400.jpg 400w,
+            images/apartment-architecture-cabinet-600.jpg 600w"
+                sizes="(max-width: 200px) 200px,
+                    (max-width: 400px) 400px,
+                    600px"
+                src="images/apartment-architecture-cabinet-600.jpg" alt="small apartment kitchen and dining room">
+
+        </main>
+        <footer>
+                <p><a href="contact.html">Contact us at:</a></p>
+                    <h4>Temple Inn &amp; Suites</h4>
+                    <p>4800 Montgomery Ln #300<br>
+                    Bethesda, MD 20814</p>
+                <p>&copy;2019 Temple Inn &amp; Suites | <a href="resource.html">Resources and References</a> | Lorna Brown</p>
+    
+            </footer>
+            <script src="scripts/hamburger.js"></script>
+
+    </body>
+</html>

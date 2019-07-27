@@ -1,0 +1,223 @@
+<!-- The temple page describes the details for at least four temples of your choice providing information about the address, telephone, email, services, history, ordinance schedule, session schedule, temple closure schedule (from a JSON source), and summary—current weather information obtained from a third party API.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Temples</title>
+        <meta name="description" content="Temple information page for a class assignment for the fictional temple inn & suites.">
+        <link rel="stylesheet" href="../../styles/normalize.css">
+        <link rel="stylesheet" href="styles/small.css">
+        <link rel="stylesheet" href="styles/medium.css">
+        <link rel="stylesheet" href="styles/large.css">
+        <link href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    </head>
+    <body>
+            <header>
+                    <img srcset="images/logo3.svg 50w,
+                    images/logo2.svg 100w,
+                    images/logo1 190w"
+                        sizes="(max-width: 50px) 50px,
+                            (max-width: 100px) 100px,
+                            190px"
+                        src="images/logo1.svg" alt="Temple Inn And Suites logo">
+                <h1>Temple Inn &amp; Suites</h1>
+    
+                <nav class="clearfix">
+                        <ul class="primarynav">
+                            <li><a href="#" title="Menu" onclick="toggleMenu()">&#9776; Menu</a></li>
+                            <li><a class="active" href="index.html" title="Home">Home</a></li>
+                            
+                            <li><a href="temple.html" title="temple">Temple</a></li>
+                            <li><a href="reservation.html" title="reservation">Reservation</a></li>
+                            <li><a href="services.html" title="services">Services</a></li>
+                            <li><a href="contact.html" title="contact">Contact</a></li>
+                        </ul>
+                    </nav> 
+    
+            </header>
+        <main>
+            <h3>Fort Lauderdale Temple</h3>
+            <ul>
+            <li><address>3901 SW 154th Ave.<br>
+                    Davie, FL 33331
+                    </address></li>
+            <li>Phone:</li> 
+            <li>Email:</li>
+            <li>Services:
+                <ul>
+                    <li>No clothing rental</li>
+                </ul>
+            </li>
+            <li>History</li>
+            <li>Ordinance schedule</li>
+            <li>Session schedule</li>
+            </ul>
+            <h3>Temple Closure Schedule </h3>
+
+            <section>
+                <div id="templeInfo">
+
+                </div>
+
+            </section>
+
+            <section class="closure">
+             
+                        
+
+            </section>
+            <img srcset="images/fort-lauderdale-florida-temple-lighted-1220607-200.jpg 200w,
+            images/fort-lauderdale-florida-temple-lighted-1220607-400.jpg 400w,
+            images/fort-lauderdale-florida-temple-lighted-1220607-600.jpg 600w"
+                sizes="(max-width: 200px) 200px,
+                    (max-width: 400px) 400px,
+                    600px"
+                src="images/fort-lauderdale-florida-temple-lighted-1220607-600.jpg" alt="Fort Lauderdale Temple in the evening">
+
+            <section id="lauderdale">
+                <div id="summary-f">
+                    <h3>Weather Summary</h3>
+                    <dl>
+                        <dt>Currently</dt><dd>&nbsp;<span id="curr-condition-f"></span></dd>
+                        <dt>High</dt><dd>&nbsp;<span id="curr-temp-f">0</span> &#176;F</dd>
+                        <dt>Humidity</dt><dd>&nbsp;<span id="humidity-f">0</span>&percnt;</dd>
+                        <dt>Wind Speed</dt><dd>&nbsp;<span id="wspeed-f">0</span> mph</dd>
+                        <dt>Wind/Chill</dt><dd>&nbsp;<span id="wchill-f"></span> &#176;F</dd>
+                    </dl>
+                </div>
+
+            </section>
+
+            <img srcset="images/oakland-temple-exterior-2236177-200.jpg 200w,
+            images/oakland-temple-exterior-2236177-400.jpg 400w,
+            images/oakland-temple-exterior-2236177-600.jpg 800w"
+                sizes="(max-width: 200px) 200px,
+                    (max-width: 400px) 400px,
+                    600px"
+                src="images/oakland-temple-exterior-2236177-600.jpg" alt="Oakland Temple view from the side">
+
+            <section id="oakland">
+
+                <div id="summary-o">
+                    <h3>Weather Summary</h3>
+                    <dl>
+                        <dt>Currently</dt><dd>&nbsp;<span id="curr-condition-o"></span></dd>
+                        <dt>High</dt><dd>&nbsp;<span id="curr-temp-o">0</span> &#176;F</dd>
+                        <dt>Humidity</dt><dd>&nbsp;<span id="humidity-o">0</span>&percnt;</dd>
+                        <dt>Wind Speed</dt><dd>&nbsp;<span id="wspeed-o">0</span> mph</dd>
+                        <dt>Wind/Chill</dt><dd>&nbsp;<span id="wchill-o"></span> &#176;F</dd>
+                    </dl>
+                </div>
+            </section>
+
+            <img srcset="images/portland-oregon-temple10-200.jpg 200w,
+            images/portland-oregon-temple10-400.jpg 400w,
+            images/portland-oregon-temple10-600.jpg 800w"
+                sizes="(max-width: 200px) 200px,
+                    (max-width: 400px) 400px,
+                    600px"
+                src="images/portland-oregon-temple10-600.jpg" alt="Portland Oregon Temple">
+
+            <section id="portland">
+                <div id="summary-p">
+                    <h3>Weather Summary</h3>
+                    <dl>
+                        <dt>Currently</dt><dd>&nbsp;<span id="curr-condition-p"></span></dd>
+                        <dt>High</dt><dd>&nbsp;<span id="curr-temp-p">0</span> &#176;F</dd>
+                        <dt>Humidity</dt><dd>&nbsp;<span id="humidity-p">0</span>&percnt;</dd>
+                        <dt>Wind Speed</dt><dd>&nbsp;<span id="wspeed-p">0</span> mph</dd>
+                        <dt>Wind/Chill</dt><dd>&nbsp;<span id="wchill-p"></span> &#176;F</dd>
+                    </dl>
+                </div>
+
+            </section>
+
+            <img srcset="images/san-antonio-temple-lds-352484-200.jpg 200w,
+            images/san-antonio-temple-lds-352484-400.jpg 400w,
+            images/san-antonio-temple-lds-352484-600.jpg 800w"
+                sizes="(max-width: 200px) 200px,
+                    (max-width: 400px) 400px,
+                    600px"
+                src="images/portland-oregon-temple10-600.jpg" alt="Portland Oregon Temple">
+
+            <section id="antonio">
+                <div id="summary-s">
+                    <h3>Weather Summary</h3>
+                    <dl>
+                        <dt>Currently</dt><dd>&nbsp;<span id="curr-condition-s"></span></dd>
+                        <dt>High</dt><dd>&nbsp;<span id="curr-temp-s">0</span> &#176;F</dd>
+                        <dt>Humidity</dt><dd>&nbsp;<span id="humidity-s">0</span>&percnt;</dd>
+                        <dt>Wind Speed</dt><dd>&nbsp;<span id="wspeed-s">0</span> mph</dd>
+                        <dt>Wind/Chill</dt><dd>&nbsp;<span id="wchill-s"></span> &#176;F</dd>
+                    </dl>
+                </div>
+                    
+            </section>
+
+                        
+
+        </main>
+        <footer>
+                <p><a href="contact.html">Contact us at:</a></p>
+                    <h4>Temple Inn &amp; Suites</h4>
+                    <p>4800 Montgomery Ln #300<br>
+                    Bethesda, MD 20814</p>
+                <p>&copy;2019 Temple Inn &amp; Suites | <a href="resource.html">Resources and References</a> | Lorna Brown</p>
+    
+            </footer>
+            <script src="scripts/hamburger.js"></script>
+        <script src="scripts/hamburger.js"></script>
+        <!-- <script src="scripts/templeinfo.js"></script> -->
+        <!-- <script src="scripts/weatherinfo-ftlauderdale.js"></script> -->
+        <!-- <script src="scripts/weatherinfo-oakland.js"></script> -->
+        <!-- <script src="scripts/weatherinfo-portland.js"></script> -->
+        <script src="scripts/weatherinfo-sanantonio.js"></script>
+        <script>
+            var section = document.querySelector("#lauderdale");
+var requestURL = "/json/temples.json";
+var request = new XMLHttpRequest();
+request.open("GET", requestURL);
+request.responseType = "json";
+request.send();
+
+request.onload = function() {
+var tInfo = request.response;
+showInfo(tInfo);
+}
+
+function showInfo(jsonObj) {
+    var templeInfo = jsonObj.temples;
+
+    for (var i = 0; i < templeInfo.length; i++) {
+        var myArticle = document.createElement("article");
+        var myH3 = document.createElement("h3");
+        var myList = document.createElement("ul");
+
+        if(templeInfo[i].name == "Fort Lauderdale Florida") {
+
+            myH3.textContent = templeInfo[i].name + " closures";
+
+            var templeClosures = templeInfo[i].closures;
+            for (var j = 0; j < templeClosures.length; j++) {
+                var listItem = document.createElement('li');
+                listItem.textContent = templeClosures[j];
+                
+                myList.appendChild(listItem);
+            }
+
+            myArticle.appendChild(myH3);
+            myArticle.appendChild(myList);
+
+            section.appendChild(myArticle);
+        }
+    }
+}
+        
+        
+        </script>
+
+    </body>
+</html>
